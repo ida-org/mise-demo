@@ -7,8 +7,12 @@ for the official source material.
 
 Browse the toolkit source libraries:
 
-* [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java)
-* [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet)
+* [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) -
+  In particular, see the various
+  [service client example programs](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test).
+* [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) -
+  In particular, see the
+  [service client sample code](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs).
 
 Downloads:
 
