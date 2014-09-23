@@ -5,6 +5,8 @@ This Maritime Information Sharing Environment (MISE) GitHub site is an
 unofficial 3rd party demo. See the [MISE website](https://mise.mda.gov/)
 for the official source material.
 
+## Common Profile
+
 The MISE may be understood in terms of a 
 "[common profile](http://pi2.ida.org/common-profile)" whereby a single
 reference view is expanded on by technical guidance views, each of which may
@@ -21,12 +23,9 @@ service (including deleting resources), as well as the retrieve service, and sea
 | Implementation | Implementation View Plumbing | Client Sample Code|
 | ---------------|------------------------------|-------------------|
 | [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | [source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) <br> [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar) | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
+| [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) | [MDA-clients/dotnet/MdaToolkit] (https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet/MdaToolkit) | [MDA-clients/dotnet/ClientTest/ClientTest.cs](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs) |
 
-* [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) -
-  In particular, see the
-  [service client sample code](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs).
-
-Downloads:
+## Downloads
 
 * [GitHub ZIP](https://github.com/ida-org/mise-demo/archive/master.zip)
 * [Official Packages](https://mise.mda.gov/drupal/tools)
