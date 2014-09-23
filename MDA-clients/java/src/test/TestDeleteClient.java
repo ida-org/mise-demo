@@ -38,7 +38,7 @@ public class TestDeleteClient {
 			CertificateFactory certFactory = CertificateFactory.getInstance("X.509");
 			X509Certificate cert = (X509Certificate) certFactory.generateCertificate(isCert);
 			
-	    	TrustFabric.initializeFromURL(trustFabricUrl, trustFabricBackupPath, cert);
+			TrustFabric.initializeFromURL(trustFabricUrl, trustFabricBackupPath, cert);
 		
 			m_client = new RestServiceClient(serverScheme, serverHost,	Integer.valueOf(serverPort), serverBasePath);
 		
