@@ -20,8 +20,7 @@ service (including deleting resources), as well as the retrieve service, and sea
 
 | Implementation | Implementation View Plumbing | Client Sample Code|
 | ---------------|------------------------------|-------------------|
-| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | 
-[source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) <br> [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar) | https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test |
+| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | [source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) <br> [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar) | https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test |
 
 * [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) -
   In particular, see the
