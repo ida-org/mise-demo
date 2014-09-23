@@ -13,18 +13,16 @@ specific implementations:
 
 ![MISE Common Profile Overview](MISE.png)
 
-This GitHub project shares some of the implementation-level code:
+This GitHub project shares some of the implementation-level code. The 
+"Implementation View Plumbing" refers to code that provides the various
+requirements laid oud in the Security and Data technical guidance views and various subviews. The "Client Sample Code" shows how to access the publish
+service (including deleting resources), as well as the retrieve service, and search service (not in diagram).
 
-* [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) -
-    - The 
-      [source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) and 
-      [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar)
-      contains all of the implementation plumbing for
-      handling the various details laid oud in the Security and Data technical
-      guidance views and various subviews.
-    - For how to access the publish service (including deleting resources), as 
-      well as the retrieve service, and search service (not in diagram), see 
-      the [service client example programs](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test).
+| Implementation | Implementation View Plumbing | Client Sample Code|
+| ---------------|------------------------------|-------------------|
+| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | 
+[source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) <br> [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar) | https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test |
+
 * [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) -
   In particular, see the
   [service client sample code](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs).
