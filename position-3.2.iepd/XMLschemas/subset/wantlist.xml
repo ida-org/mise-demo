@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:WantList w:release="2.1" w:product="NIEM" w:nillableDefault="true"
+  xmlns:iso_3166="http://niem.gov/niem/iso_3166/2.0"
+  xmlns:m="http://niem.gov/niem/domains/maritime/2.1"
+  xmlns:w="http://niem.gov/niem/wantlist/2.1"
+  xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+  xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0"
+  xmlns:scr="http://niem.gov/niem/domains/screening/2.1"
+  xmlns:geo="http://niem.gov/niem/geospatial/2.1" xmlns:gml="http://www.opengis.net/gml/3.2">
+  <w:Element w:name="geo:CircleByCenterPoint" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="geo:Polygon" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:AngleUnitText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:CargoHazmatDeclaration" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:CrewRoleText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:ISSCCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:Location" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:LocationPoint" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:LocationPointAbstract" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:Person" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PersonDebarkationDate" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PersonDebarkationLocation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PersonEmbarkationDate" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PersonEmbarkationLocation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:Port" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PortCodeText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:PortName" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:ReasonInterimISSCIssuedText"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:RecordLocatorIdentification"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:SeamanLicenseRatingText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VesselAugmentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VesselCargoCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VesselCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VesselClassText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VesselNationalFlagISO3166Alpha3Code"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element
+    w:name="m:VesselOperationalConditionOfEquipmentDescriptionText"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:Voyage" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="m:VoyageCategoryText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:AddressFullText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:CommentText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactEmailID" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactEntity" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactFaxNumber" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactMailingAddress" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactTelephoneNumber" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:ContactWebsiteURI" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Date" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DateRepresentation" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:DateTime" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Document" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:EntityOrganization" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:EntityPerson" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:IdentificationCategoryText"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:IdentificationJurisdictionISO3166Alpha3Code"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:IdentificationJurisdictionText"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:InternationalTelephoneNumber"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:LocationCountryISO3166Alpha3Code"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:LocationStateName" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:LocationStreet" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:MeasureText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:Person" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonNationalityISO3166Alpha3Code"
+    w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:PersonSexText" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="nc:StructuredAddress" w:isReference="false" w:nillable="true"/>
+  <w:Element w:name="scr:Visa" w:isReference="false" w:nillable="true"/>
+  <w:Type w:name="geo:CircleByCenterPointType" w:isRequested="false">
+    <w:ElementInType w:name="gml:CircleByCenterPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="geo:EnvelopeType" w:isRequested="false">
+    <w:ElementInType w:name="gml:Envelope" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="geo:PointType" w:isRequested="false">
+    <w:ElementInType w:name="gml:Point" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="geo:PolygonType" w:isRequested="false">
+    <w:ElementInType w:name="gml:Polygon" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="iso_3166:CountryAlpha3CodeSimpleType" w:isRequested="false">
+    <w:Facet w:facet="enumeration" w:value="ABW"/>
+    <w:Facet w:facet="enumeration" w:value="AFG"/>
+    <w:Facet w:facet="enumeration" w:value="AGO"/>
+    <w:Facet w:facet="enumeration" w:value="AIA"/>
+    <w:Facet w:facet="enumeration" w:value="ALA"/>
+    <w:Facet w:facet="enumeration" w:value="ALB"/>
+    <w:Facet w:facet="enumeration" w:value="AND"/>
+    <w:Facet w:facet="enumeration" w:value="ANT"/>
+    <w:Facet w:facet="enumeration" w:value="ARE"/>
+    <w:Facet w:facet="enumeration" w:value="ARG"/>
+    <w:Facet w:facet="enumeration" w:value="ARM"/>
+    <w:Facet w:facet="enumeration" w:value="ASM"/>
+    <w:Facet w:facet="enumeration" w:value="ATA"/>
+    <w:Facet w:facet="enumeration" w:value="ATF"/>
+    <w:Facet w:facet="enumeration" w:value="ATG"/>
+    <w:Facet w:facet="enumeration" w:value="AUS"/>
+    <w:Facet w:facet="enumeration" w:value="AUT"/>
+    <w:Facet w:facet="enumeration" w:value="AZE"/>
+    <w:Facet w:facet="enumeration" w:value="BDI"/>
+    <w:Facet w:facet="enumeration" w:value="BEL"/>
+    <w:Facet w:facet="enumeration" w:value="BEN"/>
+    <w:Facet w:facet="enumeration" w:value="BFA"/>
+    <w:Facet w:facet="enumeration" w:value="BGD"/>
+    <w:Facet w:facet="enumeration" w:value="BGR"/>
+    <w:Facet w:facet="enumeration" w:value="BHR"/>
+    <w:Facet w:facet="enumeration" w:value="BHS"/>
+    <w:Facet w:facet="enumeration" w:value="BIH"/>
+    <w:Facet w:facet="enumeration" w:value="BLR"/>
+    <w:Facet w:facet="enumeration" w:value="BLZ"/>
+    <w:Facet w:facet="enumeration" w:value="BMU"/>
+    <w:Facet w:facet="enumeration" w:value="BOL"/>
+    <w:Facet w:facet="enumeration" w:value="BRA"/>
+    <w:Facet w:facet="enumeration" w:value="BRB"/>
+    <w:Facet w:facet="enumeration" w:value="BRN"/>
+    <w:Facet w:facet="enumeration" w:value="BTN"/>
+    <w:Facet w:facet="enumeration" w:value="BVT"/>
+    <w:Facet w:facet="enumeration" w:value="BWA"/>
+    <w:Facet w:facet="enumeration" w:value="CAF"/>
+    <w:Facet w:facet="enumeration" w:value="CAN"/>
+    <w:Facet w:facet="enumeration" w:value="CCK"/>
+    <w:Facet w:facet="enumeration" w:value="CHE"/>
+    <w:Facet w:facet="enumeration" w:value="CHL"/>
+    <w:Facet w:facet="enumeration" w:value="CHN"/>
+    <w:Facet w:facet="enumeration" w:value="CIV"/>
+    <w:Facet w:facet="enumeration" w:value="CMR"/>
+    <w:Facet w:facet="enumeration" w:value="COD"/>
+    <w:Facet w:facet="enumeration" w:value="COG"/>
+    <w:Facet w:facet="enumeration" w:value="COK"/>
+    <w:Facet w:facet="enumeration" w:value="COL"/>
+    <w:Facet w:facet="enumeration" w:value="COM"/>
+    <w:Facet w:facet="enumeration" w:value="CPV"/>
+    <w:Facet w:facet="enumeration" w:value="CRI"/>
+    <w:Facet w:facet="enumeration" w:value="CUB"/>
+    <w:Facet w:facet="enumeration" w:value="CXR"/>
+    <w:Facet w:facet="enumeration" w:value="CYM"/>
+    <w:Facet w:facet="enumeration" w:value="CYP"/>
+    <w:Facet w:facet="enumeration" w:value="CZE"/>
+    <w:Facet w:facet="enumeration" w:value="DEU"/>
+    <w:Facet w:facet="enumeration" w:value="DJI"/>
+    <w:Facet w:facet="enumeration" w:value="DMA"/>
+    <w:Facet w:facet="enumeration" w:value="DNK"/>
+    <w:Facet w:facet="enumeration" w:value="DOM"/>
+    <w:Facet w:facet="enumeration" w:value="DZA"/>
+    <w:Facet w:facet="enumeration" w:value="ECU"/>
+    <w:Facet w:facet="enumeration" w:value="EGY"/>
+    <w:Facet w:facet="enumeration" w:value="ERI"/>
+    <w:Facet w:facet="enumeration" w:value="ESH"/>
+    <w:Facet w:facet="enumeration" w:value="ESP"/>
+    <w:Facet w:facet="enumeration" w:value="EST"/>
+    <w:Facet w:facet="enumeration" w:value="ETH"/>
+    <w:Facet w:facet="enumeration" w:value="FIN"/>
+    <w:Facet w:facet="enumeration" w:value="FJI"/>
+    <w:Facet w:facet="enumeration" w:value="FLK"/>
+    <w:Facet w:facet="enumeration" w:value="FRA"/>
+    <w:Facet w:facet="enumeration" w:value="FRO"/>
+    <w:Facet w:facet="enumeration" w:value="FSM"/>
+    <w:Facet w:facet="enumeration" w:value="GAB"/>
+    <w:Facet w:facet="enumeration" w:value="GBR"/>
+    <w:Facet w:facet="enumeration" w:value="GEO"/>
+    <w:Facet w:facet="enumeration" w:value="GGY"/>
+    <w:Facet w:facet="enumeration" w:value="GHA"/>
+    <w:Facet w:facet="enumeration" w:value="GIB"/>
+    <w:Facet w:facet="enumeration" w:value="GIN"/>
+    <w:Facet w:facet="enumeration" w:value="GLP"/>
+    <w:Facet w:facet="enumeration" w:value="GMB"/>
+    <w:Facet w:facet="enumeration" w:value="GNB"/>
+    <w:Facet w:facet="enumeration" w:value="GNQ"/>
+    <w:Facet w:facet="enumeration" w:value="GRC"/>
+    <w:Facet w:facet="enumeration" w:value="GRD"/>
+    <w:Facet w:facet="enumeration" w:value="GRL"/>
+    <w:Facet w:facet="enumeration" w:value="GTM"/>
+    <w:Facet w:facet="enumeration" w:value="GUF"/>
+    <w:Facet w:facet="enumeration" w:value="GUM"/>
+    <w:Facet w:facet="enumeration" w:value="GUY"/>
+    <w:Facet w:facet="enumeration" w:value="HKG"/>
+    <w:Facet w:facet="enumeration" w:value="HMD"/>
+    <w:Facet w:facet="enumeration" w:value="HND"/>
+    <w:Facet w:facet="enumeration" w:value="HRV"/>
+    <w:Facet w:facet="enumeration" w:value="HTI"/>
+    <w:Facet w:facet="enumeration" w:value="HUN"/>
+    <w:Facet w:facet="enumeration" w:value="IDN"/>
+    <w:Facet w:facet="enumeration" w:value="IMN"/>
+    <w:Facet w:facet="enumeration" w:value="IND"/>
+    <w:Facet w:facet="enumeration" w:value="IOT"/>
+    <w:Facet w:facet="enumeration" w:value="IRL"/>
+    <w:Facet w:facet="enumeration" w:value="IRN"/>
+    <w:Facet w:facet="enumeration" w:value="IRQ"/>
+    <w:Facet w:facet="enumeration" w:value="ISL"/>
+    <w:Facet w:facet="enumeration" w:value="ISR"/>
+    <w:Facet w:facet="enumeration" w:value="ITA"/>
+    <w:Facet w:facet="enumeration" w:value="JAM"/>
+    <w:Facet w:facet="enumeration" w:value="JEY"/>
+    <w:Facet w:facet="enumeration" w:value="JOR"/>
+    <w:Facet w:facet="enumeration" w:value="JPN"/>
+    <w:Facet w:facet="enumeration" w:value="KAZ"/>
+    <w:Facet w:facet="enumeration" w:value="KEN"/>
+    <w:Facet w:facet="enumeration" w:value="KGZ"/>
+    <w:Facet w:facet="enumeration" w:value="KHM"/>
+    <w:Facet w:facet="enumeration" w:value="KIR"/>
+    <w:Facet w:facet="enumeration" w:value="KNA"/>
+    <w:Facet w:facet="enumeration" w:value="KOR"/>
+    <w:Facet w:facet="enumeration" w:value="KWT"/>
+    <w:Facet w:facet="enumeration" w:value="LAO"/>
+    <w:Facet w:facet="enumeration" w:value="LBN"/>
+    <w:Facet w:facet="enumeration" w:value="LBR"/>
+    <w:Facet w:facet="enumeration" w:value="LBY"/>
+    <w:Facet w:facet="enumeration" w:value="LCA"/>
+    <w:Facet w:facet="enumeration" w:value="LIE"/>
+    <w:Facet w:facet="enumeration" w:value="LKA"/>
+    <w:Facet w:facet="enumeration" w:value="LSO"/>
+    <w:Facet w:facet="enumeration" w:value="LTU"/>
+    <w:Facet w:facet="enumeration" w:value="LUX"/>
+    <w:Facet w:facet="enumeration" w:value="LVA"/>
+    <w:Facet w:facet="enumeration" w:value="MAC"/>
+    <w:Facet w:facet="enumeration" w:value="MAR"/>
+    <w:Facet w:facet="enumeration" w:value="MCO"/>
+    <w:Facet w:facet="enumeration" w:value="MDA"/>
+    <w:Facet w:facet="enumeration" w:value="MDG"/>
+    <w:Facet w:facet="enumeration" w:value="MDV"/>
+    <w:Facet w:facet="enumeration" w:value="MEX"/>
+    <w:Facet w:facet="enumeration" w:value="MHL"/>
+    <w:Facet w:facet="enumeration" w:value="MKD"/>
+    <w:Facet w:facet="enumeration" w:value="MLI"/>
+    <w:Facet w:facet="enumeration" w:value="MLT"/>
+    <w:Facet w:facet="enumeration" w:value="MMR"/>
+    <w:Facet w:facet="enumeration" w:value="MNE"/>
+    <w:Facet w:facet="enumeration" w:value="MNG"/>
+    <w:Facet w:facet="enumeration" w:value="MNP"/>
+    <w:Facet w:facet="enumeration" w:value="MOZ"/>
+    <w:Facet w:facet="enumeration" w:value="MRT"/>
+    <w:Facet w:facet="enumeration" w:value="MSR"/>
+    <w:Facet w:facet="enumeration" w:value="MTQ"/>
+    <w:Facet w:facet="enumeration" w:value="MUS"/>
+    <w:Facet w:facet="enumeration" w:value="MWI"/>
+    <w:Facet w:facet="enumeration" w:value="MYS"/>
+    <w:Facet w:facet="enumeration" w:value="MYT"/>
+    <w:Facet w:facet="enumeration" w:value="NAM"/>
+    <w:Facet w:facet="enumeration" w:value="NCL"/>
+    <w:Facet w:facet="enumeration" w:value="NER"/>
+    <w:Facet w:facet="enumeration" w:value="NFK"/>
+    <w:Facet w:facet="enumeration" w:value="NGA"/>
+    <w:Facet w:facet="enumeration" w:value="NIC"/>
+    <w:Facet w:facet="enumeration" w:value="NIU"/>
+    <w:Facet w:facet="enumeration" w:value="NLD"/>
+    <w:Facet w:facet="enumeration" w:value="NOR"/>
+    <w:Facet w:facet="enumeration" w:value="NPL"/>
+    <w:Facet w:facet="enumeration" w:value="NRU"/>
+    <w:Facet w:facet="enumeration" w:value="NZL"/>
+    <w:Facet w:facet="enumeration" w:value="OMN"/>
+    <w:Facet w:facet="enumeration" w:value="PAK"/>
+    <w:Facet w:facet="enumeration" w:value="PAN"/>
+    <w:Facet w:facet="enumeration" w:value="PCN"/>
+    <w:Facet w:facet="enumeration" w:value="PER"/>
+    <w:Facet w:facet="enumeration" w:value="PHL"/>
+    <w:Facet w:facet="enumeration" w:value="PLW"/>
+    <w:Facet w:facet="enumeration" w:value="PNG"/>
+    <w:Facet w:facet="enumeration" w:value="POL"/>
+    <w:Facet w:facet="enumeration" w:value="PRI"/>
+    <w:Facet w:facet="enumeration" w:value="PRK"/>
+    <w:Facet w:facet="enumeration" w:value="PRT"/>
+    <w:Facet w:facet="enumeration" w:value="PRY"/>
+    <w:Facet w:facet="enumeration" w:value="PSE"/>
+    <w:Facet w:facet="enumeration" w:value="PYF"/>
+    <w:Facet w:facet="enumeration" w:value="QAT"/>
+    <w:Facet w:facet="enumeration" w:value="REU"/>
+    <w:Facet w:facet="enumeration" w:value="ROU"/>
+    <w:Facet w:facet="enumeration" w:value="RUS"/>
+    <w:Facet w:facet="enumeration" w:value="RWA"/>
+    <w:Facet w:facet="enumeration" w:value="SAU"/>
+    <w:Facet w:facet="enumeration" w:value="SDN"/>
+    <w:Facet w:facet="enumeration" w:value="SEN"/>
+    <w:Facet w:facet="enumeration" w:value="SGP"/>
+    <w:Facet w:facet="enumeration" w:value="SGS"/>
+    <w:Facet w:facet="enumeration" w:value="SHN"/>
+    <w:Facet w:facet="enumeration" w:value="SJM"/>
+    <w:Facet w:facet="enumeration" w:value="SLB"/>
+    <w:Facet w:facet="enumeration" w:value="SLE"/>
+    <w:Facet w:facet="enumeration" w:value="SLV"/>
+    <w:Facet w:facet="enumeration" w:value="SMR"/>
+    <w:Facet w:facet="enumeration" w:value="SOM"/>
+    <w:Facet w:facet="enumeration" w:value="SPM"/>
+    <w:Facet w:facet="enumeration" w:value="SRB"/>
+    <w:Facet w:facet="enumeration" w:value="STP"/>
+    <w:Facet w:facet="enumeration" w:value="SUR"/>
+    <w:Facet w:facet="enumeration" w:value="SVK"/>
+    <w:Facet w:facet="enumeration" w:value="SVN"/>
+    <w:Facet w:facet="enumeration" w:value="SWE"/>
+    <w:Facet w:facet="enumeration" w:value="SWZ"/>
+    <w:Facet w:facet="enumeration" w:value="SYC"/>
+    <w:Facet w:facet="enumeration" w:value="SYR"/>
+    <w:Facet w:facet="enumeration" w:value="TCA"/>
+    <w:Facet w:facet="enumeration" w:value="TCD"/>
+    <w:Facet w:facet="enumeration" w:value="TGO"/>
+    <w:Facet w:facet="enumeration" w:value="THA"/>
+    <w:Facet w:facet="enumeration" w:value="TJK"/>
+    <w:Facet w:facet="enumeration" w:value="TKL"/>
+    <w:Facet w:facet="enumeration" w:value="TKM"/>
+    <w:Facet w:facet="enumeration" w:value="TLS"/>
+    <w:Facet w:facet="enumeration" w:value="TON"/>
+    <w:Facet w:facet="enumeration" w:value="TTO"/>
+    <w:Facet w:facet="enumeration" w:value="TUN"/>
+    <w:Facet w:facet="enumeration" w:value="TUR"/>
+    <w:Facet w:facet="enumeration" w:value="TUV"/>
+    <w:Facet w:facet="enumeration" w:value="TWN"/>
+    <w:Facet w:facet="enumeration" w:value="TZA"/>
+    <w:Facet w:facet="enumeration" w:value="UGA"/>
+    <w:Facet w:facet="enumeration" w:value="UKR"/>
+    <w:Facet w:facet="enumeration" w:value="UMI"/>
+    <w:Facet w:facet="enumeration" w:value="URY"/>
+    <w:Facet w:facet="enumeration" w:value="USA"/>
+    <w:Facet w:facet="enumeration" w:value="UZB"/>
+    <w:Facet w:facet="enumeration" w:value="VAT"/>
+    <w:Facet w:facet="enumeration" w:value="VCT"/>
+    <w:Facet w:facet="enumeration" w:value="VEN"/>
+    <w:Facet w:facet="enumeration" w:value="VGB"/>
+    <w:Facet w:facet="enumeration" w:value="VIR"/>
+    <w:Facet w:facet="enumeration" w:value="VNM"/>
+    <w:Facet w:facet="enumeration" w:value="VUT"/>
+    <w:Facet w:facet="enumeration" w:value="WLF"/>
+    <w:Facet w:facet="enumeration" w:value="WSM"/>
+    <w:Facet w:facet="enumeration" w:value="YEM"/>
+    <w:Facet w:facet="enumeration" w:value="ZAF"/>
+    <w:Facet w:facet="enumeration" w:value="ZMB"/>
+    <w:Facet w:facet="enumeration" w:value="ZWE"/>
+  </w:Type>
+  <w:Type w:name="m:AngleMeasureType" w:isRequested="false">
+    <w:ElementInType w:name="m:AngleUnit" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:CargoType" w:isRequested="true">
+    <w:ElementInType w:name="m:CargoDestinationLocation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:CargoHazmatDeclaration"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:CertificateType" w:isRequested="false">
+    <w:ElementInType w:name="m:CertificateEndorsementText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:CertificateIssueDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:CertificateIssuingAgency"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:CertificateRestrictionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:HazmatDeclarationType" w:isRequested="false">
+    <w:ElementInType w:name="m:HazmatDeclarationChemicalCommonName"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:HazmatDeclarationDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:HazmatDeclarationMaterialAmountMeasure"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:HazmatDeclarationUNHazmatCode"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:InternationalShipSecurityCertificateType" w:isRequested="false">
+    <w:ElementInType w:name="m:ISSCCategory" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:ReasonInterimISSCIssued"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:RecognizedISSCSecurityEntity"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselSecurityOfficerContactInformation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselSecurityPlanImplementedIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:LocationType" w:isRequested="false">
+    <w:ElementInType w:name="m:LocationPointAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:LocationPort" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:MerchantMarinerDocumentType" w:isRequested="false">
+    <w:ElementInType w:name="m:MerchantMarinerDocumentIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:MerchantMarinerDocumentIssueDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType
+      w:name="m:MerchantMarinerDocumentIssuingOrganization"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:PersonAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="m:MerchantMarinerDocument"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:SeamanLicense" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:PersonType" w:isRequested="true">
+    <w:ElementInType w:name="m:PersonAugmentation" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:PortIdentifyingAttributesType" w:isRequested="false">
+    <w:ElementInType w:name="m:PortCode" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:PortNameAbstract" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:PortType" w:isRequested="false">
+    <w:ElementInType w:name="m:PortCode" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:PortDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:PortNameAbstract" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:SeamanLicenseType" w:isRequested="false">
+    <w:ElementInType w:name="m:SeamanLicenseExpirationDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:SeamanLicenseIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:SeamanLicenseIssueDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:SeamanLicenseIssuingOrganization"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:SeamanLicenseRating"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:VesselAugmentationType" w:isRequested="false">
+    <w:ElementInType w:name="m:VesselBeamMeasure" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselCDCCargoOnBoardIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselCallSignText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselCargoCategory"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselCategory" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselCharterer" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselClass" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselClassificationSocietyName"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselContactInformation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselDOCCertificate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselDraftLoadedMeasure"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselGrossTonnage" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselHullNumberText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselIMONumberText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselISMCodeText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselISSC" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="m:VesselLocation" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselMMSIText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselNationalFlag" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselNavigationStatusAbstract"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselOfficialCoastGuardNumberText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselOperationalConditionOfEquipment"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselOperator" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselOverallLengthMeasure"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselOwner" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselSCONUMText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VesselSafetyManagementCertificate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="m:VoyageType" w:isRequested="false">
+    <w:ElementInType w:name="m:VoyageCategory" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="m:VoyageIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:ActivityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:ActivityDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ActivityName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:AddressType" w:isRequested="false">
+    <w:ElementInType w:name="nc:AddressRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:BinaryType" w:isRequested="false">
+    <w:ElementInType w:name="nc:BinaryLocationURI" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:ContactInformationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:ContactEntity" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ContactEntityDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ContactInformationDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:ContactMeans" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:DateRangeType" w:isRequested="true">
+    <w:ElementInType w:name="nc:EndDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:StartDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:DateType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DateRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:DocumentType" w:isRequested="false">
+    <w:ElementInType w:name="nc:DocumentCreationDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentCreator" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentExpirationDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:DocumentStatus" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:EntityType" w:isRequested="false">
+    <w:ElementInType w:name="nc:EntityRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="2"/>
+  </w:Type>
+  <w:Type w:name="nc:IdentificationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:IdentificationCategory"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:IdentificationCategoryDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:IdentificationExpirationDate"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:IdentificationID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:IdentificationJurisdiction"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:InternationalTelephoneNumberType" w:isRequested="false">
+    <w:ElementInType w:name="nc:TelephoneCountryCodeID"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:TelephoneNumberID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:TelephoneSuffixID" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:LocationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:LocationAddress" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:MeasureType" w:isRequested="false">
+    <w:ElementInType w:name="nc:MeasureUnitText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:MeasureValue" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:OrganizationType" w:isRequested="false">
+    <w:ElementInType w:name="nc:OrganizationDescriptionText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:OrganizationLocation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:OrganizationName" w:isReference="false"
+      w:minOccurs="1" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:OrganizationPrimaryContactInformation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonNameType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonFullName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonGivenName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonMiddleName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonNamePrefixText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonNameSuffixText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonSurName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:PersonType" w:isRequested="false">
+    <w:ElementInType w:name="nc:PersonBirthDate" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonNationality" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonNationalityText"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonOtherIdentification"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="unbounded"/>
+    <w:ElementInType w:name="nc:PersonSex" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:PersonUSCitizenIndicator"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:SpeedMeasureType" w:isRequested="false">
+    <w:ElementInType w:name="nc:SpeedUnitCode" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:StatusType" w:isRequested="false">
+    <w:ElementInType w:name="nc:StatusText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:StreetType" w:isRequested="false">
+    <w:ElementInType w:name="nc:StreetFullText" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:StructuredAddressType" w:isRequested="false">
+    <w:ElementInType w:name="nc:AddressDeliveryPoint"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:AddressRecipientName"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationCityName" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationCountry" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationPostalCode"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="nc:LocationState" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="nc:TangibleItemType" w:isRequested="false">
+    <w:ElementInType w:name="nc:ItemImage" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="unbounded"/>
+  </w:Type>
+  <w:Type w:name="nc:TelephoneNumberType" w:isRequested="false">
+    <w:ElementInType w:name="nc:TelephoneNumberRepresentation"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+  <w:Type w:name="niem-xsd:anyURI" w:isRequested="true"/>
+  <w:Type w:name="niem-xsd:decimal" w:isRequested="true"/>
+  <w:Type w:name="scr:VisaType" w:isRequested="false">
+    <w:ElementInType w:name="scr:VisaControlNumberID"
+      w:isReference="false" w:minOccurs="0" w:maxOccurs="1"/>
+    <w:ElementInType w:name="scr:VisaFoilNumber" w:isReference="false"
+      w:minOccurs="0" w:maxOccurs="1"/>
+  </w:Type>
+</w:WantList>

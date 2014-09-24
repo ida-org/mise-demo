@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://niem.gov/niem/domains/maritime/2.1" version="1" xmlns:i2="http://niem.gov/niem/appinfo/2.1" xmlns:i="http://niem.gov/niem/appinfo/2.0" xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" xmlns:m="http://niem.gov/niem/domains/maritime/2.1" xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:geo="http://niem.gov/niem/geospatial/2.1" xmlns:hazmat="http://niem.gov/niem/hazmat/2.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:iso_3166="http://niem.gov/niem/iso_3166/2.0">
+  <xsd:annotation>
+    <xsd:documentation>Maritime</xsd:documentation>
+    <xsd:appinfo>
+      <i:ConformantIndicator>true</i:ConformantIndicator>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import schemaLocation="../../../proxy/xsd/2.0/xsd.xsd" namespace="http://niem.gov/niem/proxy/xsd/2.0"/>
+  <xsd:import schemaLocation="../../../niem-core/2.0/niem-core.xsd" namespace="http://niem.gov/niem/niem-core/2.0"/>
+  <xsd:import schemaLocation="../../../geospatial/2.1/geospatial.xsd" namespace="http://niem.gov/niem/geospatial/2.1"/>
+  <xsd:import schemaLocation="../../../iso_3166/2.0/iso_3166.xsd" namespace="http://niem.gov/niem/iso_3166/2.0"/>
+  <xsd:import schemaLocation="../../../appinfo/2.1/appinfo.xsd" namespace="http://niem.gov/niem/appinfo/2.1"/>
+  <xsd:import schemaLocation="../../../appinfo/2.0/appinfo.xsd" namespace="http://niem.gov/niem/appinfo/2.0"/>
+  <xsd:import schemaLocation="../../../structures/2.0/structures.xsd" namespace="http://niem.gov/niem/structures/2.0"/>
+  <xsd:import schemaLocation="../../../hazmat/2.1/hazmat.xsd" namespace="http://niem.gov/niem/hazmat/2.1"/>
+  <xsd:complexType name="AngleMeasureType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a measurement of an angle.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="MeasureType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:MeasureType">
+        <xsd:sequence>
+          <xsd:element ref="m:AngleUnit" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CargoType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a good or goods transported by a conveyance.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="TangibleItemType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:TangibleItemType">
+        <xsd:sequence>
+          <xsd:element ref="m:CargoDestinationLocation" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:CargoHazmatDeclaration" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CertificateType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for an official or government-issued certificate or license.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="DocumentType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:DocumentType">
+        <xsd:sequence>
+          <xsd:element ref="m:CertificateEndorsementText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:CertificateIssueDate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:CertificateIssuingAgency" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:CertificateRestrictionText" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="HazmatDeclarationType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a declaration of hazardous materials within transported goods.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="s:ComplexObjectType">
+        <xsd:sequence>
+          <xsd:element ref="m:HazmatDeclarationChemicalCommonName" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:HazmatDeclarationDescriptionText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:HazmatDeclarationMaterialAmountMeasure" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:HazmatDeclarationUNHazmatCode" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="InternationalShipSecurityCertificateType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for an International Ship Security Certificate (ISSC).</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="CertificateType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="m:CertificateType">
+        <xsd:sequence>
+          <xsd:element ref="m:ReasonInterimISSCIssued" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:RecognizedISSCSecurityEntity" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:ISSCCategory" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselSecurityOfficerContactInformation" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselSecurityPlanImplementedIndicator" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LocationType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a maritime geophysical location.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="LocationType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:LocationType">
+        <xsd:sequence>
+          <xsd:element ref="m:LocationPointAbstract" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:LocationPort" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="MerchantMarinerDocumentType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a Merchant Mariner Document (MMD).</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="DocumentType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:DocumentType">
+        <xsd:sequence>
+          <xsd:element ref="m:MerchantMarinerDocumentIdentification" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:MerchantMarinerDocumentIssueDate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:MerchantMarinerDocumentIssuingOrganization" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonAugmentationType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for additional maritime-specific information about a person.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="AugmentationType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="s:AugmentationType">
+        <xsd:sequence>
+          <xsd:element ref="m:MerchantMarinerDocument" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:SeamanLicense" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for an applied augmentation for type nc:PersonType</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="PersonType"/>
+        <i2:AugmentedTypeIndicator>true</i2:AugmentedTypeIndicator>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:PersonType">
+        <xsd:sequence>
+          <xsd:element ref="m:PersonAugmentation" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PortIdentifyingAttributesType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for the identifying attributes of a port.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="s:ComplexObjectType">
+        <xsd:sequence>
+          <xsd:element ref="m:PortCode" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:PortNameAbstract" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PortType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a facility capable of receiving vessels and transferring cargo.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="FacilityType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:FacilityType">
+        <xsd:sequence>
+          <xsd:element ref="m:PortCode" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:PortDescriptionText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:PortNameAbstract" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SeamanLicenseType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for an able-bodied seaman license.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="DocumentType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:DocumentType">
+        <xsd:sequence>
+          <xsd:element ref="m:SeamanLicenseExpirationDate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:SeamanLicenseIdentification" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:SeamanLicenseIssueDate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:SeamanLicenseIssuingOrganization" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:SeamanLicenseRating" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VesselAugmentationType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for additional information about a vessel.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="AugmentationType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="s:AugmentationType">
+        <xsd:sequence>
+          <xsd:element ref="m:VesselBeamMeasure" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselCallSignText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselCargoCategory" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselCategory" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselCDCCargoOnBoardIndicator" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselCharterer" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselClass" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselClassificationSocietyName" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselContactInformation" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselDescriptionText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselDOCCertificate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselDraftLoadedMeasure" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselGrossTonnage" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselHullNumberText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselIdentification" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="m:VesselIMONumberText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselISMCodeText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselISSC" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselLocation" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselMMSIText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselName" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselNationalFlag" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselNavigationStatusAbstract" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselOfficialCoastGuardNumberText" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselOperationalConditionOfEquipment" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselOperator" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselOverallLengthMeasure" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselOwner" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselSafetyManagementCertificate" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VesselSCONUMText" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VoyageType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a journey from one place to another.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="s:ComplexObjectType">
+        <xsd:sequence>
+          <xsd:element ref="m:VoyageCategory" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="m:VoyageIdentification" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AngleUnit" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a unit of measure of an angle value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AngleUnitText" type="nc:TextType" substitutionGroup="m:AngleUnit" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A unit of measure of an angle value.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="AngleUnit"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CargoDestinationLocation" type="m:LocationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The intended destination of cargo.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CargoHazmatDeclaration" type="m:HazmatDeclarationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A declaration for hazardous materials in cargo.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CertificateEndorsementText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An endorsement, qualification, or rating listed on a certificate which authorizes the performance of certain duties or actions.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CertificateIssueDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date when a certificate was issued.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CertificateIssuingAgency" type="nc:EntityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An agency or organization that issued a certificate.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CertificateRestrictionText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A restriction on a certificate.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CrewRole" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a role a crew member fulfills on a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CrewRoleText" type="nc:TextType" substitutionGroup="m:CrewRole" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A role a crew member fulfills on a vessel.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="CrewRole"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HazmatDeclarationChemicalCommonName" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A common name for a chemical.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HazmatDeclarationDescriptionText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of a hazardous material listed on a hazmat declaration.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HazmatDeclarationMaterialAmountMeasure" type="nc:MeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A measure of the amount, weight, volume, or mass of a hazardous material.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="HazmatDeclarationUNHazmatCode" type="hazmat:HazmatUNCodeType" substitutionGroup="nc:SubstanceCode" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A United Nations/North American (UN/NA) Hazardous Materials Code pertaining to a hazardous material.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="SubstanceCode"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ISSCCategory" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a kind or category of International Ship Security Certificate (ISSC).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ISSCCategoryText" type="nc:TextType" substitutionGroup="m:ISSCCategory" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A kind or category of International Ship Security Certificate (ISSC).</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="ISSCCategory"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Location" type="m:LocationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A maritime geophysical location.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LocationPoint" type="geo:PointType" substitutionGroup="m:LocationPointAbstract" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A location specified by a 2D or 3D geometric point.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="LocationPointAbstract"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LocationPointAbstract" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a location specified by a 2D or 3D point.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LocationPort" type="m:PortIdentifyingAttributesType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A location identified by a port.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MerchantMarinerDocument" type="m:MerchantMarinerDocumentType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A Merchant Mariner Document (MMD) issued to a merchant mariner.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MerchantMarinerDocumentIdentification" type="nc:IdentificationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>Details about a merchant mariner document identifier, including the number.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MerchantMarinerDocumentIssueDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date a merchant mariner document was issued.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MerchantMarinerDocumentIssuingOrganization" type="nc:OrganizationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The issuer of a merchant mariner document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Person" type="m:PersonType" substitutionGroup="nc:Person" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>Applied augmentation for type nc:PersonType</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="Person"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonAugmentation" type="m:PersonAugmentationType" substitutionGroup="s:Augmentation">
+    <xsd:annotation>
+      <xsd:documentation>Additional maritime-specific information about a person.</xsd:documentation>
+      <xsd:appinfo>
+        <i:AppliesTo i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="PersonType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonDebarkationDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date and time a person debarked from a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonDebarkationLocation" type="m:LocationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The location where person debarked from a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonEmbarkationDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date and time a person embarked on (boarded) a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PersonEmbarkationLocation" type="m:LocationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The location where person embarked on (boarded) a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Port" type="m:PortType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A facility capable of receiving vessels and transferring cargo.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PortCode" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a code to identify a port.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PortCodeText" type="nc:TextType" substitutionGroup="m:PortCode" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A code to identify a port.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="PortCode"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PortDescriptionText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of a port.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PortName" type="nc:ProperNameTextType" substitutionGroup="m:PortNameAbstract" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A name of a port.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="PortNameAbstract"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PortNameAbstract" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a name of a port.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReasonInterimISSCIssued" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a reason why an interim International Ship Security Certificate (ISSC) was issued.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ReasonInterimISSCIssuedText" type="nc:TextType" substitutionGroup="m:ReasonInterimISSCIssued" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A reason why an interim International Ship Security Certificate (ISSC) was issued.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="ReasonInterimISSCIssued"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RecognizedISSCSecurityEntity" type="nc:EntityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The Recognized Security Organization/Flag Administration for a International Ship Security Certificate (ISSC).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RecordLocatorIdentification" type="nc:IdentificationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An identifier for a passenger name record (PNR).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicense" type="m:SeamanLicenseType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An able-bodied seaman license issued to a person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseExpirationDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date after which a seaman license is no longer valid.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseIdentification" type="nc:IdentificationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>Details about a seaman license identifier, including the number.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseIssueDate" type="nc:DateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The date a seaman license was issued.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseIssuingOrganization" type="nc:OrganizationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The issuer of a seaman license.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseRating" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SeamanLicenseRatingText" type="nc:TextType" substitutionGroup="m:SeamanLicenseRating" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A rating on a seaman license which authorizes the performance of certain shipboard duties or actions.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="SeamanLicenseRating"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselAugmentation" type="m:VesselAugmentationType" substitutionGroup="s:Augmentation">
+    <xsd:annotation>
+      <xsd:documentation>Additional information about a vessel.</xsd:documentation>
+      <xsd:appinfo>
+        <i:AppliesTo i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="VesselType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselBeamMeasure" type="nc:LengthMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A measure of the beam (breadth) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCDCCargoOnBoardIndicator" type="niem-xsd:boolean" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>True if a vessel is carrying hazardous or Certain Dangerous Cargo (CDC); false otherwise.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCallSignText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A call sign for a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCargoCategory" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a description of the kind of cargo that a vessel is carrying.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCargoCategoryText" type="nc:TextType" substitutionGroup="m:VesselCargoCategory" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of the kind of cargo that a vessel is carrying. Cargo types may be categorized as DG=Dangerous Goods, HS=Harmful Substances, or MP=Marine Pollutants.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VesselCargoCategory"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCategory" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a description of a type of a vessel based upon the purpose for which the vessel was designed or built.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCategoryText" type="nc:TextType" substitutionGroup="m:VesselCategory" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of a type of a vessel based upon the purpose for which the vessel was designed or built.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VesselCategory"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselCharterer" type="nc:EntityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An entity that chartered a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselClass" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a class or category of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselClassText" type="nc:TextType" substitutionGroup="m:VesselClass" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A class or category of a vessel.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VesselClass"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselClassificationSocietyName" type="nc:ProperNameTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The name of a classification society for a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselContactInformation" type="nc:ContactInformationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A means of contacting a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselDOCCertificate" type="m:CertificateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A Document of Compliance (DOC) Certificate for a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselDescriptionText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselDraftLoadedMeasure" type="nc:LengthMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A measure of the draft of a vessel when fully loaded.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselGrossTonnage" type="niem-xsd:nonNegativeInteger" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The Gross Tonnage (GT) of a vessel, described as a unitless index related to the overall internal volume of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselHullNumberText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The hull number of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselIMONumberText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An International Maritime Organization Number (IMO number) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselISMCodeText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An International Safety Management (ISM) Code of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselISSC" type="m:InternationalShipSecurityCertificateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An International Ship Security Certificate (ISSC) for a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselIdentification" type="nc:IdentificationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An identification of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselLocation" type="m:LocationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The location of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselMMSIText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A Maritime Mobile Service Identity (MMSI) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselName" type="nc:ProperNameTextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The name of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselNationalFlag" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a country under which a vessel sails.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselNationalFlagISO3166Alpha3Code" type="iso_3166:CountryAlpha3CodeType" substitutionGroup="m:VesselNationalFlag" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A national flag under which a vessel sails.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VesselNationalFlag"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselNavigationStatusAbstract" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a navigational status of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOfficialCoastGuardNumberText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An Official United States Coast Guard Number (USCG Official Number) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOperationalConditionOfEquipment" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for the Operational Condition of Equipment (OCE) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOperationalConditionOfEquipmentDescriptionText" type="nc:TextType" substitutionGroup="m:VesselOperationalConditionOfEquipment" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A description of the Operational Condition of Equipment (OCE) of a vessel.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VesselOperationalConditionOfEquipment"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOperator" type="nc:EntityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An entity that is responsible for the day-to-day operations and travels of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOverallLengthMeasure" type="nc:LengthMeasureType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A measure of the overall length of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselOwner" type="nc:EntityType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An entity that owns a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselSCONUMText" type="nc:TextType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A Ship Control Number (SCONUM) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselSafetyManagementCertificate" type="m:CertificateType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A Safety Management Certificate (SMC) for a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselSecurityOfficerContactInformation" type="nc:ContactInformationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The contact information for the appointed Company Security Officer (CSO) of a vessel.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VesselSecurityPlanImplementedIndicator" type="niem-xsd:boolean" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>True if a vessel has implemented a Vessel Security Plan (VSP); false otherwise.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Voyage" type="m:VoyageType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A journey from one place to another.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VoyageCategory" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A data concept for a kind of a voyage.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VoyageCategoryText" type="nc:TextType" substitutionGroup="m:VoyageCategory" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A kind of a voyage.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:name="VoyageCategory"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VoyageIdentification" type="nc:IdentificationType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>An identification for a voyage name, number, or code.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

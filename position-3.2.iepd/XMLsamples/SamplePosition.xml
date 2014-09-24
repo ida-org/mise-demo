@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Sample Position instance corresponding to the Position version 3.2 IEPD-->
+<posex:Message xsi:schemaLocation="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2 ../XMLSchemas/exchange/3.2/position-exchange.xsd" xmlns:m="http://niem.gov/niem/domains/maritime/2.1" xmlns:mda="http://niem.gov/niem/domains/maritime/2.1/mda/3.2" xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ism="urn:us:gov:ic:ism" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="true">
+	<nc:DocumentCreationDate>
+		<nc:Date>2011-12-01</nc:Date>
+	</nc:DocumentCreationDate>
+	<nc:DocumentExpirationDate>
+		<nc:Date>2012-01-01</nc:Date>
+	</nc:DocumentExpirationDate>
+	<nc:DocumentCreator>
+		<nc:EntityOrganization>
+			<nc:OrganizationName>Example Organization</nc:OrganizationName>
+		</nc:EntityOrganization>
+	</nc:DocumentCreator>
+	<mda:RecordIDURI>00000001</mda:RecordIDURI>
+	<mda:MessageStatusCode>Initial</mda:MessageStatusCode>
+	<mda:MessageSourceSystemName>Track Source</mda:MessageSourceSystemName>
+	<mda:ICISMMarkings ism:classification="U" ism:ownerProducer="USA"/>
+	<mda:Expansion>
+		<mda:DataField>
+			<mda:DataFieldName>An Additional Property</mda:DataFieldName>
+			<mda:DataFieldContentText>Content of the Property</mda:DataFieldContentText>
+		</mda:DataField>
+	</mda:Expansion>
+	<mda:Vessel>
+		<m:VesselAugmentation>
+			<m:VesselCallSignText>XXX33421</m:VesselCallSignText>
+			<m:VesselHullNumberText>12345678910A</m:VesselHullNumberText>
+			<m:VesselIMONumberText>IMO0000001</m:VesselIMONumberText>
+			<m:VesselMMSIText>012345678</m:VesselMMSIText>
+			<m:VesselName>MV Example</m:VesselName>
+			<m:VesselNationalFlagISO3166Alpha3Code>USA</m:VesselNationalFlagISO3166Alpha3Code>
+			<m:VesselOwner>
+				<nc:EntityPerson>
+					<nc:PersonName>
+						<nc:PersonFullName>John Doe</nc:PersonFullName>
+					</nc:PersonName>
+					<nc:PersonNationalityISO3166Alpha3Code>JPN</nc:PersonNationalityISO3166Alpha3Code>
+				</nc:EntityPerson>
+			</m:VesselOwner>
+			<m:VesselSCONUMText>0000001</m:VesselSCONUMText>
+		</m:VesselAugmentation>
+	</mda:Vessel>
+	<mda:Position>
+		<m:LocationPoint>
+			<gml:Point gml:id="tp1">
+				<gml:pos>-1.0 -1.0</gml:pos>
+			</gml:Point>
+		</m:LocationPoint>
+		<mda:PositionSpeedMeasure>
+			<nc:MeasureText>12</nc:MeasureText>
+			<nc:SpeedUnitCode>kt</nc:SpeedUnitCode>
+		</mda:PositionSpeedMeasure>
+		<mda:PositionCourseMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionCourseMeasure>
+		<mda:PositionHeadingMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionHeadingMeasure>
+		<mda:PositionNavigationStatus>
+			<nc:StatusText>Under way using engines</nc:StatusText>
+		</mda:PositionNavigationStatus>
+		<mda:PositionDateTime>
+			<nc:DateTime>2011-11-30T00:00:00Z</nc:DateTime>
+		</mda:PositionDateTime>
+	</mda:Position>
+	<mda:Position>
+		<m:LocationPoint>
+			<gml:Point gml:id="tp2">
+				<gml:pos>1.0 1.0</gml:pos>
+			</gml:Point>
+		</m:LocationPoint>
+		<mda:PositionSpeedMeasure>
+			<nc:MeasureText>12</nc:MeasureText>
+			<nc:SpeedUnitCode>kt</nc:SpeedUnitCode>
+		</mda:PositionSpeedMeasure>
+		<mda:PositionCourseMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionCourseMeasure>
+		<mda:PositionHeadingMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionHeadingMeasure>
+		<mda:PositionNavigationStatus>
+			<nc:StatusText>Under way using engines</nc:StatusText>
+		</mda:PositionNavigationStatus>
+		<mda:PositionDateTime>
+			<nc:DateTime>2011-12-01T00:00:00Z</nc:DateTime>
+		</mda:PositionDateTime>
+	</mda:Position>
+	<mda:Position>
+		<m:LocationPoint>
+			<gml:Point gml:id="tp3">
+				<gml:pos>2.0 2.0</gml:pos>
+			</gml:Point>
+		</m:LocationPoint>
+		<mda:PositionSpeedMeasure>
+			<nc:MeasureText>12</nc:MeasureText>
+			<nc:SpeedUnitCode>kt</nc:SpeedUnitCode>
+		</mda:PositionSpeedMeasure>
+		<mda:PositionCourseMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionCourseMeasure>
+		<mda:PositionHeadingMeasure>
+			<nc:MeasureText>180</nc:MeasureText>
+			<m:AngleUnitText>deg</m:AngleUnitText>
+		</mda:PositionHeadingMeasure>
+		<mda:PositionNavigationStatus>
+			<nc:StatusText>Under way using engines</nc:StatusText>
+		</mda:PositionNavigationStatus>
+		<mda:PositionDateTime>
+			<nc:DateTime>2011-12-02T00:00:00Z</nc:DateTime>
+		</mda:PositionDateTime>
+	</mda:Position>
+</posex:Message>

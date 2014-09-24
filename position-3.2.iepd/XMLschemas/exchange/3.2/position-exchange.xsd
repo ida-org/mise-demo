@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:i="http://niem.gov/niem/appinfo/2.0"  xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"  xmlns:mda="http://niem.gov/niem/domains/maritime/2.1/mda/3.2" targetNamespace="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2" version="3.2">
+  <xsd:annotation>
+    <xsd:documentation>A vessel track</xsd:documentation>
+    <xsd:appinfo>
+      <i:ConformantIndicator>true</i:ConformantIndicator>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../../subset/niem/structures/2.0/structures.xsd"/>
+  <xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../../subset/niem/appinfo/2.0/appinfo.xsd"/>
+  <xsd:import namespace="http://niem.gov/niem/domains/maritime/2.1/mda/3.2" schemaLocation="../../extension/mda/3.2/mda.xsd"/>
+  <xsd:element name="Message" type="posex:MessageType">
+    <xsd:annotation>
+      <xsd:documentation>A vessel track message</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MessageType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a single vessel track message.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="mda:DocumentType">
+        <xsd:sequence>
+          <xsd:element ref="mda:Vessel" minOccurs="0"/>
+          <xsd:element ref="mda:Position" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./mpd-catalog.xsl"?><ca:Catalog xmlns:ca="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/"
+            xmlns:p="http://reference.niem.gov/niem/resource/mpd/lexicon/1.1/purpose#"
+            xmlns:n="http://reference.niem.gov/niem/resource/mpd/lexicon/1.1/nature#"
+            ca:descriptionText="Vessel Position IEPD"
+            ca:mpdURI="http://niem.gov/niem/domains/maritime/2.1/position/iepd/3.2"
+            ca:mpdName="position"
+            ca:mpdVersionID="3.2"
+            ca:mpdClassCode="iepd">
+   <ca:File ca:id="f1" ca:relativePathName="./XMLsamples/SamplePosition.xml"
+            ca:natureURI="[n:xml]"
+            ca:purposeURI="[p:sample-instance]"/>
+   <ca:FileSet ca:id="fsext" ca:natureURI="[n:file-set]"
+               ca:purposeURI="[p:base-schema-set]">
+      <ca:File ca:id="f3" ca:relativePathName="./XMLschemas/exchange/3.2/position-exchange.xsd"
+               ca:natureURI="[n:niem-exchange-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f4"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGeneratedTypes.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f5"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISM25X.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f6"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMACCM.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f7"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMAtomicEnergyMarkings.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f8"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMAttributes.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f9"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMClassificationAll.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f10"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMClassificationUS.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f11"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMCompliesWith.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f12"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMDissem.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f13"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMFGIOpen.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f14"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMFGIProtected.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f15"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMNonIC.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f16"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMNonUSControls.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f17"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMNotice.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f18"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMOwnerProducer.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f19"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMRelTo.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f20"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMSAR.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f21"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/CVEnumISMSCIControls.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f22"
+               ca:relativePathName="./XMLschemas/extension/external/ISMV6/IC-ISM.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f23"
+               ca:relativePathName="./XMLschemas/extension/mda-codes/3.2/mda-codes.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f24" ca:relativePathName="./XMLschemas/extension/mda/3.2/mda.xsd"
+               ca:natureURI="[n:niem-extension-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f26"
+               ca:relativePathName="./XMLschemas/subset/niem/appinfo/2.0/appinfo.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f27"
+               ca:relativePathName="./XMLschemas/subset/niem/appinfo/2.1/appinfo.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f28"
+               ca:relativePathName="./XMLschemas/subset/niem/domains/maritime/2.1/maritime.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f28b"
+               ca:relativePathName="./XMLschemas/subset/niem/domains/screening/2.1/screening.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f29"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/gml/3.2.1/gml.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f30"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gco/basicTypes.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f31"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gco/gco.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f32"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gco/gcoBase.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f33"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/applicationSchema.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f34"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/citation.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f35"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/constraints.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f36"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/content.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f37"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/dataQuality.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f38"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/distribution.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f39"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/extent.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f40"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/freeText.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f41"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/gmd.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f42"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/identification.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f43"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/maintenance.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f44"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/metadataApplication.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f45"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/metadataEntity.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f46"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/metadataExtension.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f47"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/portrayalCatalogue.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f48"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/referenceSystem.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f49"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/spatialRepresentation.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f50"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gsr/gsr.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f51"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gsr/spatialReferencing.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f52"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gss/geometry.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f53"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gss/gss.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f54"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gts/gts.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f55"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gts/temporalObjects.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f56"
+               ca:relativePathName="./XMLschemas/subset/niem/external/ogc/xlink/1.0.0/xlinks.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f57"
+               ca:relativePathName="./XMLschemas/subset/niem/geospatial/2.1/geospatial.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f58"
+               ca:relativePathName="./XMLschemas/subset/niem/hazmat/2.1/hazmat.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f59"
+               ca:relativePathName="./XMLschemas/subset/niem/iso_3166/2.0/iso_3166.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f60"
+               ca:relativePathName="./XMLschemas/subset/niem/niem-core/2.0/niem-core.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f61"
+               ca:relativePathName="./XMLschemas/subset/niem/proxy/xsd/2.0/xsd.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f62"
+               ca:relativePathName="./XMLschemas/subset/niem/structures/2.0/structures.xsd"
+               ca:natureURI="[n:niem-subset-schema]"
+               ca:purposeURI="[p:set-member]"/>
+      <ca:File ca:id="f63" ca:relativePathName="./XMLschemas/subset/wantlist.xml"
+               ca:natureURI="[n:niem-wantlist]"
+               ca:purposeURI="[p:set-member]"/>
+   </ca:FileSet>
+   <ca:File ca:id="f64" ca:relativePathName="./mpd-catalog.xml" ca:natureURI="[n:xml-catalog]"
+            ca:purposeURI="[p:catalog]"/>
+   <ca:File ca:id="f65" ca:relativePathName="./mpd-catalog.xsl" ca:natureURI="[n:xslt]"
+            ca:purposeURI="[p:display]"/>
+   <ca:File ca:id="f66" ca:relativePathName="./changelog.docx" ca:natureURI="[n:doc]"
+            ca:purposeURI="[p:changelog]"/>
+   <ca:File ca:id="f67" ca:relativePathName="./master-document.docx" ca:natureURI="[n:doc]"
+            ca:purposeURI="[p:master-document]"/>
+   <ca:File ca:id="f68" ca:relativePathName="./documentation/Component Mapping.xlsx" ca:natureURI="[n:xls]"
+            ca:purposeURI="[p:mapping]"/>
+   <ca:Folder ca:id="d1" ca:relativePathName="./"/>
+   <ca:Folder ca:id="d1b" ca:relativePathName="./documentation/"/>
+   <ca:Folder ca:id="d2" ca:relativePathName="./XMLsamples/"/>
+   <ca:Folder ca:id="d3" ca:relativePathName="./XMLschemas/"/>
+   <ca:Folder ca:id="d4" ca:relativePathName="./XMLschemas/exchange/"/>
+   <ca:Folder ca:id="d5" ca:relativePathName="./XMLschemas/exchange/3.2/"/>
+   <ca:Folder ca:id="d6" ca:relativePathName="./XMLschemas/extension/"/>
+   <ca:Folder ca:id="d7" ca:relativePathName="./XMLschemas/extension/external/"/>
+   <ca:Folder ca:id="d8" ca:relativePathName="./XMLschemas/extension/external/ISMV6/"/>
+   <ca:Folder ca:id="d9"
+              ca:relativePathName="./XMLschemas/extension/external/ISMV6/CVEGenerated/"/>
+   <ca:Folder ca:id="d10" ca:relativePathName="./XMLschemas/extension/mda/"/>
+   <ca:Folder ca:id="d11" ca:relativePathName="./XMLschemas/extension/mda-codes/"/>
+   <ca:Folder ca:id="d12" ca:relativePathName="./XMLschemas/extension/mda-codes/3.2/"/>
+   <ca:Folder ca:id="d13" ca:relativePathName="./XMLschemas/extension/mda/3.2/"/>
+   <ca:Folder ca:id="d16" ca:relativePathName="./XMLschemas/subset/"/>
+   <ca:Folder ca:id="d17" ca:relativePathName="./XMLschemas/subset/niem/"/>
+   <ca:Folder ca:id="d18" ca:relativePathName="./XMLschemas/subset/niem/appinfo/"/>
+   <ca:Folder ca:id="d19" ca:relativePathName="./XMLschemas/subset/niem/appinfo/2.0/"/>
+   <ca:Folder ca:id="d20" ca:relativePathName="./XMLschemas/subset/niem/appinfo/2.1/"/>
+   <ca:Folder ca:id="d21" ca:relativePathName="./XMLschemas/subset/niem/domains/"/>
+   <ca:Folder ca:id="d22" ca:relativePathName="./XMLschemas/subset/niem/domains/maritime/"/>
+   <ca:Folder ca:id="d23"
+              ca:relativePathName="./XMLschemas/subset/niem/domains/maritime/2.1/"/>
+   <ca:Folder ca:id="d23a" ca:relativePathName="./XMLschemas/subset/niem/domains/screening/"/>
+   <ca:Folder ca:id="d23b"
+              ca:relativePathName="./XMLschemas/subset/niem/domains/screening/2.1/"/>
+   <ca:Folder ca:id="d24" ca:relativePathName="./XMLschemas/subset/niem/external/"/>
+   <ca:Folder ca:id="d25" ca:relativePathName="./XMLschemas/subset/niem/external/ogc/"/>
+   <ca:Folder ca:id="d26" ca:relativePathName="./XMLschemas/subset/niem/external/ogc/gml/"/>
+   <ca:Folder ca:id="d27"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/gml/3.2.1/"/>
+   <ca:Folder ca:id="d28" ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/"/>
+   <ca:Folder ca:id="d29"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/"/>
+   <ca:Folder ca:id="d30"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/"/>
+   <ca:Folder ca:id="d31"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gco/"/>
+   <ca:Folder ca:id="d32"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gmd/"/>
+   <ca:Folder ca:id="d33"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gsr/"/>
+   <ca:Folder ca:id="d34"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gss/"/>
+   <ca:Folder ca:id="d35"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/iso/19139/20070417/gts/"/>
+   <ca:Folder ca:id="d36" ca:relativePathName="./XMLschemas/subset/niem/external/ogc/xlink/"/>
+   <ca:Folder ca:id="d37"
+              ca:relativePathName="./XMLschemas/subset/niem/external/ogc/xlink/1.0.0/"/>
+   <ca:Folder ca:id="d38" ca:relativePathName="./XMLschemas/subset/niem/geospatial/"/>
+   <ca:Folder ca:id="d39" ca:relativePathName="./XMLschemas/subset/niem/geospatial/2.1/"/>
+   <ca:Folder ca:id="d40" ca:relativePathName="./XMLschemas/subset/niem/hazmat/"/>
+   <ca:Folder ca:id="d41" ca:relativePathName="./XMLschemas/subset/niem/hazmat/2.1/"/>
+   <ca:Folder ca:id="d42" ca:relativePathName="./XMLschemas/subset/niem/iso_3166/"/>
+   <ca:Folder ca:id="d43" ca:relativePathName="./XMLschemas/subset/niem/iso_3166/2.0/"/>
+   <ca:Folder ca:id="d44" ca:relativePathName="./XMLschemas/subset/niem/niem-core/"/>
+   <ca:Folder ca:id="d45" ca:relativePathName="./XMLschemas/subset/niem/niem-core/2.0/"/>
+   <ca:Folder ca:id="d46" ca:relativePathName="./XMLschemas/subset/niem/proxy/"/>
+   <ca:Folder ca:id="d47" ca:relativePathName="./XMLschemas/subset/niem/proxy/xsd/"/>
+   <ca:Folder ca:id="d48" ca:relativePathName="./XMLschemas/subset/niem/proxy/xsd/2.0/"/>
+   <ca:Folder ca:id="d49" ca:relativePathName="./XMLschemas/subset/niem/structures/"/>
+   <ca:Folder ca:id="d50" ca:relativePathName="./XMLschemas/subset/niem/structures/2.0/"/>
+   <ca:Metadata>
+      <ca:SecurityMarkingText>Unclassified/public</ca:SecurityMarkingText>
+      <ca:CreationDate>2012-12-20</ca:CreationDate>
+      <ca:Relationship ca:relationshipCode="adapts"
+                       ca:resourceURI="http://niem.gov/niem/domains/maritime/2.1/mda/eiem/3.2"/>
+      <ca:KeywordText>Maritime Domain Awareness</ca:KeywordText>
+      <ca:KeywordText>Position</ca:KeywordText>
+      <ca:KeywordText>Track</ca:KeywordText>
+      <ca:DomainText>Maritime</ca:DomainText>
+      <ca:PurposeText>TBD</ca:PurposeText>
+      <ca:ExchangePatternText>query/response</ca:ExchangePatternText>
+      <ca:ExchangePatternText>publish</ca:ExchangePatternText>
+      <ca:AuthoritativeSource>
+         <ca:ASName>DOD EA for MDA</ca:ASName>
+         <ca:POC>
+            <ca:POCName>Ms. Olithia Strom</ca:POCName>
+            <ca:POCEmail>olithia.strom@navy.mil</ca:POCEmail>
+            <ca:POCTelephone>619-553-1822</ca:POCTelephone>
+         </ca:POC>
+      </ca:AuthoritativeSource>
+   </ca:Metadata>
+</ca:Catalog>

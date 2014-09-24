@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://niem.gov/niem/domains/screening/2.1" version="1" xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" xmlns:i="http://niem.gov/niem/appinfo/2.0" xmlns:scr="http://niem.gov/niem/domains/screening/2.1">
+  <xsd:annotation>
+    <xsd:documentation>The People Screening domain provides harmonized information sharing content within the Screening Portfolio of DHS.  The Screening namespace is initially being populated with person screening information for immigrant and non-immigrant person types who have been encountered and identified by the Screening Portfolio Components.  Screening expands on encounter-related NIEM elements currently included in the Immigration and Intelligence domains.</xsd:documentation>
+    <xsd:appinfo>
+      <i:ConformantIndicator>true</i:ConformantIndicator>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import schemaLocation="../../../proxy/xsd/2.0/xsd.xsd" namespace="http://niem.gov/niem/proxy/xsd/2.0"/>
+  <xsd:import schemaLocation="../../../niem-core/2.0/niem-core.xsd" namespace="http://niem.gov/niem/niem-core/2.0"/>
+  <xsd:import schemaLocation="../../../appinfo/2.0/appinfo.xsd" namespace="http://niem.gov/niem/appinfo/2.0"/>
+  <xsd:import schemaLocation="../../../structures/2.0/structures.xsd" namespace="http://niem.gov/niem/structures/2.0"/>
+  <xsd:complexType name="VisaType">
+    <xsd:annotation>
+      <xsd:documentation>A data type for a travel document allowing international travelers to enter a country for a designated purpose within a designated period of time.</xsd:documentation>
+      <xsd:appinfo>
+        <i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="DocumentType"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="nc:DocumentType">
+        <xsd:sequence>
+          <xsd:element ref="scr:VisaControlNumberID" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="scr:VisaFoilNumber" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Visa" type="scr:VisaType" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>A travel document allowing international travelers to enter a country for a designated purpose within a designated period of time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VisaControlNumberID" type="niem-xsd:string" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The identifier  assigned to the VISA by DHS Citizenship and Immigration</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="VisaFoilNumber" type="niem-xsd:string" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation>The text that denotes the number that is pre-printed on the Non-Immigrant Visa (NIV) or Immigrant Visa (IV) foil by the manufacturer.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

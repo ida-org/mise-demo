@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:s="http://niem.gov/niem/structures/2.0"
+            xmlns:mda="http://niem.gov/niem/domains/maritime/2.1/mda/3.2"
+            xmlns:i="http://niem.gov/niem/appinfo/2.0"
+            xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+            xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0"
+            xmlns:iso_3166="http://niem.gov/niem/iso_3166/2.0"
+            xmlns:m="http://niem.gov/niem/domains/maritime/2.1"
+            xmlns:ism="urn:us:gov:ic:ism"
+            xmlns:mda-codes="http://niem.gov/niem/domains/maritime/2.1/mda/codes/3.2"
+            xmlns:geo="http://niem.gov/niem/geospatial/2.1"
+            xmlns:scr="http://niem.gov/niem/domains/screening/2.1"
+            targetNamespace="http://niem.gov/niem/domains/maritime/2.1/mda/3.2"
+            version="3.2">
+   <xsd:annotation>
+      <xsd:documentation>National MDA Architecture Enterprise Information Exchange Model</xsd:documentation>
+      <xsd:appinfo>
+         <i:ConformantIndicator>true</i:ConformantIndicator>
+      </xsd:appinfo>
+   </xsd:annotation>
+   <xsd:import namespace="http://niem.gov/niem/appinfo/2.0"
+               schemaLocation="../../../subset/niem/appinfo/2.0/appinfo.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/structures/2.0"
+               schemaLocation="../../../subset/niem/structures/2.0/structures.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/niem-core/2.0"
+               schemaLocation="../../../subset/niem/niem-core/2.0/niem-core.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/iso_3166/2.0"
+               schemaLocation="../../../subset/niem/iso_3166/2.0/iso_3166.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/proxy/xsd/2.0"
+               schemaLocation="../../../subset/niem/proxy/xsd/2.0/xsd.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/domains/screening/2.1"
+               schemaLocation="../../../subset/niem/domains/screening/2.1/screening.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/domains/maritime/2.1"
+               schemaLocation="../../../subset/niem/domains/maritime/2.1/maritime.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/domains/maritime/2.1/mda/codes/3.2"
+               schemaLocation="../../mda-codes/3.2/mda-codes.xsd"/>
+   <xsd:import namespace="http://niem.gov/niem/geospatial/2.1"
+               schemaLocation="../../../subset/niem/geospatial/2.1/geospatial.xsd"/>
+   <xsd:import namespace="urn:us:gov:ic:ism" schemaLocation="../../external/ISMV6/IC-ISM.xsd">
+      <xsd:annotation>
+         <xsd:documentation>IC/ISM version 6.0</xsd:documentation>
+         <xsd:appinfo>
+            <i:ConformantIndicator>false</i:ConformantIndicator>
+         </xsd:appinfo>
+      </xsd:annotation>
+   </xsd:import>
+   <xsd:simpleType name="CountryCodeListSimpleType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a space-separated list of country codes.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:list itemType="iso_3166:CountryAlpha3CodeSimpleType"/>
+   </xsd:simpleType>
+   <xsd:complexType name="DataFieldType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a single piece of additional data.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="s:ComplexObjectType">
+            <xsd:sequence>
+               <xsd:element ref="mda:DataFieldName"/>
+               <xsd:element ref="mda:DataFieldContentText" minOccurs="0"/>
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="DocumentType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a document. Serves as the base from which to derive the type of an exchange root element.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="nc:DocumentType">
+            <xsd:sequence>
+               <xsd:element ref="mda:RecordIDURI" minOccurs="0"/>
+               <xsd:element ref="mda:MessageExerciseName" minOccurs="0"/>
+               <xsd:element ref="mda:MessageStatusCode" minOccurs="0"/>
+               <xsd:element ref="mda:MessageSourceSystemName" minOccurs="0"/>
+               <xsd:element ref="mda:ICISMMarkings" minOccurs="0"/>
+               <xsd:element ref="mda:Expansion" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:attribute ref="mda:securityIndicatorText"/>
+            <xsd:attribute ref="mda:scopeText"/>
+            <xsd:attribute ref="mda:scopeIndicatorText"/>
+            <xsd:attribute ref="mda:releasableIndicator"/>
+            <xsd:attribute ref="mda:releasableNationsCode"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="ExpansionType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a set of arbitrary additional data.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="s:ComplexObjectType">
+            <xsd:sequence>
+               <xsd:element ref="mda:DataField" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute ref="mda:securityIndicatorText"/>
+            <xsd:attribute ref="mda:scopeText"/>
+            <xsd:attribute ref="mda:scopeIndicatorText"/>
+            <xsd:attribute ref="mda:releasableIndicator"/>
+            <xsd:attribute ref="mda:releasableNationsCode"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="ICISMMarkingsType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a set of markings as defined by the Intelligence Community Metadata Standard for Information Security Marking (IC-ISM).</xsd:documentation>
+         <xsd:appinfo>
+            <i:ExternalAdapterTypeIndicator>true</i:ExternalAdapterTypeIndicator>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="s:ComplexObjectType">
+            <xsd:attribute ref="ism:classification">
+               <xsd:annotation>
+                  <xsd:documentation>A single indicator of the highest level of classification applicable to an information resource or portion within the domain of classified national security information.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute ref="ism:ownerProducer">
+               <xsd:annotation>
+                  <xsd:documentation>A list of one or more indicators identifying the national government or international organization that have purview over the classification marking of an information resource or portion therein.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute ref="ism:disseminationControls">
+               <xsd:annotation>
+                  <xsd:documentation>A list of one or more indicators identifying the expansion or limitation on the distribution of information.</xsd:documentation>
+               </xsd:annotation>
+            </xsd:attribute>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="PositionType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a geospatial position, course, heading, speed, and status of a vessel at a given time.</xsd:documentation>
+         <xsd:appinfo>
+            <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="s:ComplexObjectType">
+            <xsd:sequence>
+               <xsd:element ref="m:LocationPointAbstract" minOccurs="0"/>
+               <xsd:element ref="mda:PositionSpeedMeasure" minOccurs="0"/>
+               <xsd:element ref="mda:PositionCourseMeasure" minOccurs="0"/>
+               <xsd:element ref="mda:PositionHeadingMeasure" minOccurs="0"/>
+               <xsd:element ref="mda:PositionNavigationStatus" minOccurs="0"/>
+               <xsd:element ref="mda:PositionDateTime" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:attribute ref="mda:securityIndicatorText"/>
+            <xsd:attribute ref="mda:scopeText"/>
+            <xsd:attribute ref="mda:scopeIndicatorText"/>
+            <xsd:attribute ref="mda:releasableIndicator"/>
+            <xsd:attribute ref="mda:releasableNationsCode"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:complexType name="VesselType">
+      <xsd:annotation>
+         <xsd:documentation>A data type for a vessel.</xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexContent>
+         <xsd:extension base="nc:VesselType">
+            <xsd:sequence>
+               <xsd:element ref="m:VesselAugmentation" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:attribute ref="mda:securityIndicatorText"/>
+            <xsd:attribute ref="mda:scopeText"/>
+            <xsd:attribute ref="mda:scopeIndicatorText"/>
+            <xsd:attribute ref="mda:releasableIndicator"/>
+            <xsd:attribute ref="mda:releasableNationsCode"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+   <xsd:element name="DataFieldContentText" type="nc:TextType">
+      <xsd:annotation>
+         <xsd:documentation>A value of a data field.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DataField" type="mda:DataFieldType">
+      <xsd:annotation>
+         <xsd:documentation>An arbitrary data field.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="DataFieldName" type="nc:TextType">
+      <xsd:annotation>
+         <xsd:documentation>A name of a data field.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Expansion" type="mda:ExpansionType">
+      <xsd:annotation>
+         <xsd:documentation>A list of fields containing additional information.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="ICISMMarkings" type="mda:ICISMMarkingsType">
+      <xsd:annotation>
+         <xsd:documentation>A set of markings as defined by the Intelligence Community Metadata Standard for Information Security Marking (IC-ISM)</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="RecordIDURI" type="niem-xsd:anyURI">
+      <xsd:annotation>
+         <xsd:documentation>A unique ID identifying a record contained in the message.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="MessageExerciseName" type="nc:TextType">
+      <xsd:annotation>
+         <xsd:documentation>A name of an exercise for which the message is being sent.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="MessageSourceSystemName" type="nc:TextType">
+      <xsd:annotation>
+         <xsd:documentation>A name of a system from which the message originated. </xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="MessageStatusCode" type="mda-codes:MessageStatusCodeType">
+      <xsd:annotation>
+         <xsd:documentation>A status of a message. An initial, update to an existing, or canceling an existing message. To update or cancel a message, the Message ID field must match a previously transmitted message.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Position" type="mda:PositionType">
+      <xsd:annotation>
+         <xsd:documentation>A geospatial position, course, heading, speed, and status of a vessel or other conveyance at a given time.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PositionCourseMeasure" type="m:AngleMeasureType" nillable="true">
+      <xsd:annotation>
+         <xsd:documentation>A measure of the angular course of a vessel or other conveyance.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PositionDateTime" type="nc:DateType" nillable="true">
+      <xsd:annotation>
+         <xsd:documentation>A date and time that a position of a vessel or other conveyance was recorded or measured.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PositionHeadingMeasure" type="m:AngleMeasureType" nillable="true">
+      <xsd:annotation>
+         <xsd:documentation>A measure of the angular heading of a vessel or other conveyance.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PositionNavigationStatus" type="nc:StatusType" nillable="true">
+      <xsd:annotation>
+         <xsd:documentation>A navigational status of a vessel or other conveyance at a particular position.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="PositionSpeedMeasure" type="nc:SpeedMeasureType" nillable="true">
+      <xsd:annotation>
+         <xsd:documentation>A measure of the speed of a vessel or other conveyance.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:element name="Vessel" type="mda:VesselType">
+      <xsd:annotation>
+         <xsd:documentation>A vessel.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+   <xsd:attribute name="scopeText" type="xsd:string">
+      <xsd:annotation>
+         <xsd:documentation>Scope of the data.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:attribute>
+   <xsd:attribute name="scopeIndicatorText" type="xsd:string">
+      <xsd:annotation>
+         <xsd:documentation>A security indicator for the scope of the data</xsd:documentation>
+      </xsd:annotation>
+   </xsd:attribute>
+   <xsd:attribute name="securityIndicatorText" type="xsd:string">
+      <xsd:annotation>
+         <xsd:documentation>A security indicator (LEI, PPI, COI, etc.)</xsd:documentation>
+      </xsd:annotation>
+   </xsd:attribute>
+   <xsd:attribute name="releasableIndicator" type="xsd:boolean">
+      <xsd:annotation>
+         <xsd:documentation>True if the data is releasable; false otherwise.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:attribute>
+   <xsd:attribute name="releasableNationsCode" type="mda:CountryCodeListSimpleType">
+      <xsd:annotation>
+         <xsd:documentation>A space-separated list of nations allowed for release.</xsd:documentation>
+      </xsd:annotation>
+   </xsd:attribute>
+</xsd:schema>
