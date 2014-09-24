@@ -35,7 +35,7 @@ provide confidentiality as well as machine-to-machine authentication.
 This GitHub project shares some of the implementation-level code. The 
 "Implementation View Plumbing" refers to code that implements TG view
 requirements like the ones mentioned above. The "Client Sample Code" shows how
-to access the [publish service](https://mise.mda.gov/drupal/node/105) 
+to access the [publish service](https://github.com/ida-org/mise-demo/blob/master/publish-spec.md) 
 (including deleting position records) and the 
 [search and retrieve services](https://mise.mda.gov/drupal/node/106).
 
