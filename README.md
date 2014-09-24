@@ -24,7 +24,7 @@ specific implementations:
 
 ![MISE Common Profile Overview](MISE.png)
 
-The [Security](https://mise.mda.gov/drupal/node/27) and Data Technical 
+The [Security](https://github.com/ida-org/mise-demo/blob/master/security-services-interfacing.md) and Data Technical 
 Guidance views, along with their various subviews, define the exchange data 
 formats as well as the security requirements for successful data exchange. For
 example, [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)
