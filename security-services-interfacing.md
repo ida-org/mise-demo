@@ -1,10 +1,10 @@
 <h1 class="with-tabs">Interfacing with the Security Services</h1>
 <p>All interactions to publish and consume data within the MISE are secured interactions over SSL between trusted systems.  As a prerequisite to understanding the security implementation examples in this section, it is highly recommend you first read the following documents:</p>
-<ol><li><a href="/drupal/node/77">National MDA Architecture Plan</a> for an overview of the MISE security approach.</li>
-<li><a href="/drupal/node/104">MISE Interface Security Specification</a> for the details of how trusted systems securely connect to the ISI.</li>
-<li><a href="/drupal/node/103">MISE Attribute Specification</a> for an explanation of the common attributes used for entitlement management.</li>
+<ol><li><a href="https://mise.mda.gov/drupal/node77">National MDA Architecture Plan</a> for an overview of the MISE security approach.</li>
+<li><a href="https://mise.mda.gov/drupal/node104">MISE Interface Security Specification</a> for the details of how trusted systems securely connect to the ISI.</li>
+<li><a href="https://mise.mda.gov/drupal/node103">MISE Attribute Specification</a> for an explanation of the common attributes used for entitlement management.</li>
 </ol><h1>Step 1: Obtain X.509 Certificates</h1>
-<p>Numerous tools and processes are available for creating key pairs and X.509 certificates. The exact process chosen by a trusted system will vary depending on the platform the trusted system implementation is based upon, agency procedures, and the chosen root CA.  In some cases a trusted system may need to generate a keypair and a certificate signing request (CSR) internally using a tool such as OpenSSL  or Java’s keytool, and submit the CSR to a root CA for signing following instructions provided by the root CA.  General instructions are provided at <a href="/drupal/node/39">generating the private key and public Certificate Signing Request (CSR).</a></p>
+<p>Numerous tools and processes are available for creating key pairs and X.509 certificates. The exact process chosen by a trusted system will vary depending on the platform the trusted system implementation is based upon, agency procedures, and the chosen root CA.  In some cases a trusted system may need to generate a keypair and a certificate signing request (CSR) internally using a tool such as OpenSSL  or Java’s keytool, and submit the CSR to a root CA for signing following instructions provided by the root CA.  General instructions are provided at <a href="https://mise.mda.gov/drupal/node39">generating the private key and public Certificate Signing Request (CSR).</a></p>
 <h1>Step 2: Register Trusted System in Trust Fabric</h1>
 <p>The MISE trust fabric is an xml document cryptographically signed by the MISE Certificate Authority (CA) that describes each trusted system using the <a href="http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">SAML 2.0</a> metadata format.  To successfully connect to the ISI, the public key for your X.509 certificate and additional entity metadata for your trusted system must be added to the trust fabric so the ISI can validate requests.  Work with MISE Management to provide the necessary information for registration in the trust fabric.</p>
 <p>You will have an entry in the trust fabric for each role for which your system is authorized, i.e. information provider and/or information consumer.</p>
@@ -99,7 +99,7 @@ Now an example entry for a consumer trusted system.  Notice in the consuming sys
 	&lt;/md:ContactPerson&gt;
 &lt;/md:EntityDescriptor&gt;
 </pre><h1>Step 3: Download the Trust Fabric Document</h1>
-<p>At this point you can verify the trust fabric now has entity metadata so your trusted system can authenticate to the ISI by downloading the trust fabric.  As discussed in the <a href="/drupal/node/104">MISE Interface Security Specification</a>, the trust fabric contains public keys for all trusted systems participating in the MISE, as well as the ISI certificates you will need to trust to interact with the MISE services. </p>
+<p>At this point you can verify the trust fabric now has entity metadata so your trusted system can authenticate to the ISI by downloading the trust fabric.  As discussed in the <a href="https://mise.mda.gov/drupal/node104">MISE Interface Security Specification</a>, the trust fabric contains public keys for all trusted systems participating in the MISE, as well as the ISI certificates you will need to trust to interact with the MISE services. </p>
 <p>The trust fabric endpoint requires HTTPS but does not require a client certificate or any other method of authentication.<br />
 Retrieve the trust fabric document by any standard means, including viewing in any browser, at the MISE server at <a href="https://services.mda.gov/miseresources/TrustFabric.xml">https://services.mda.gov/miseresources/TrustFabric.xml</a>.  </p>
 <p>The trust fabric document for the MISE test environment is available at:<br /><a href="https://107.23.66.168:9443/miseresources/TrustFabric.xml">https://107.23.66.168:9443/miseresources/TrustFabric.xml</a></p>
@@ -140,7 +140,7 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
 		return kvs.getUsedCertificate();
 	}
 </pre><h1>Step 4: Implement MISE Security Attributes</h1>
-<p>As detailed in the <a href="/drupal/node/103">MISE Attribute Specification</a>, entitlement management within the MISE relies on the use of a common set of entity, user, and data attributes to make run-time authorization decisions as to whether a trusted system and requesting user are authorized to access a requested information resource.</p>
+<p>As detailed in the <a href="https://mise.mda.gov/drupal/node103">MISE Attribute Specification</a>, entitlement management within the MISE relies on the use of a common set of entity, user, and data attributes to make run-time authorization decisions as to whether a trusted system and requesting user are authorized to access a requested information resource.</p>
 <p>There are three categories for attributes defined for the National MDA Architecture:</p>
 <ol><li>Entity Attributes: Attributes that pertain to a trusted system within the MISE.</li>
 <li>User Attributes: Attributes that pertain to a human user.</li>
@@ -150,7 +150,7 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
 <p>Access controls for the information you publish are conveyed by adding security attribute tags on the root element of each message (record) published.  These security attributes applied within the message make up the information access policy that will be used by the ISI to determine which consumer requests can access your information. The following high level steps may be used as a guide to understand how you as the information provider define your information access policy.</p>
 <ol><strong>
 <li>First you must determine the information you will share.</li>
-<p></p></strong>The types of information that can currently be shared via the ISI include vessel position reports, vessel of interest/alert information, and vessel arrival information.  Download the corresponding NIEM-M based information exchange package documentation which defines the message format.  Links to the IEPD artifacts are available at the top of the <a href="/drupal/node/24"> Data Mapping</a> section.
+<p></p></strong>The types of information that can currently be shared via the ISI include vessel position reports, vessel of interest/alert information, and vessel arrival information.  Download the corresponding NIEM-M based information exchange package documentation which defines the message format.  Links to the IEPD artifacts are available at the top of the <a href="https://mise.mda.gov/drupal/node24"> Data Mapping</a> section.
 <p><strong>
 <li>Identify the legislative or policy constraints on the information. </li>
 <p></p></strong>As the information provider you must work with your policy and/or legal department to identify which elements within a type of message can be shared and which have restrictions.  This will involve an element by element evaluation of the message format defined within the IEPD. </p>
@@ -158,7 +158,7 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
 <p><strong>
 <li>Specify your information access policy using the MISE security attributes.</li>
 <p></p></strong>Currently information is grouped by LE sensitive (LEI), privacy protected (PPI) and the rest of the community (COI).  Additionally you can limit based on country and specify releasability of the information.</p>
-<p>The following table highlights the primary attributes used to specify information access policy.  For the full description of all attributes, see the <a href="/drupal/node/103">MISE Attribute Specification.</a></p>
+<p>The following table highlights the primary attributes used to specify information access policy.  For the full description of all attributes, see the <a href="https://mise.mda.gov/drupal/node103">MISE Attribute Specification.</a></p>
 <table><tr><td> Attribute Name</td>
 <td> Possible Values</td>
 <td> Description</td>
@@ -197,7 +197,7 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
                 mda:scopeText="Superstorm Sandy" mda:scopeIndicatorText="COI"&gt;
 </pre></ol><h2>Supplying User Attributes for Search and Retrieve</h2>
 <h3>Map Local User Privileges to MISE User Attributes</h3>
-<p>Use the MISE security attributes as defined in the <a href="/drupal/node/103">MISE Attribute Specification</a> to assert citizenship and the access level for the user associated with a query.<br />
+<p>Use the MISE security attributes as defined in the <a href="https://mise.mda.gov/drupal/node103">MISE Attribute Specification</a> to assert citizenship and the access level for the user associated with a query.<br />
 Citizenship is conveyed using the CitizenshipCode attribute, <code> mise:1.4:user:CitizenshipCode </code>, with a value equal to the ISO 3-letter country code.</p>
 <p>The access level is conveyed using one or more attributes defined as indicators.</p>
 <table width="100%"><tr><td> Indicator</td>
@@ -213,7 +213,7 @@ Citizenship is conveyed using the CitizenshipCode attribute, <code> mise:1.4:use
 <td> mise:1.4:user:COIIndicator </td>
 <td> Minimum access level assigned to user that requires access to information shared by the MISE community.</td>
 </tr></table><h1>Forming the SAML User Assertion</h1>
-<p>The following code snippet provides an example of building the user assertions and adding them to the context of the request.  The full example is shown in the section on <a href="/drupal/node/30">Interfacing with the Search Services</a>.</p>
+<p>The following code snippet provides an example of building the user assertions and adding them to the context of the request.  The full example is shown in the section on <a href="https://mise.mda.gov/drupal/node30">Interfacing with the Search Services</a>.</p>
 <pre class="brush:java">
 //Form the user assertion
 String assertingPartyID = "test.client";
