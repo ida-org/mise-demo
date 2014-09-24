@@ -1,8 +1,3 @@
-<html>
-<head>
-<title>MISE Publish Specification</title>
-</head>
-<body>
 <h1>MISE Publish Specification</h1>
 <h2>Introduction</h2>
 <p>This page provides the interface details for publishing, updating, and deleting recordsets within the MISE.  The MISE follows the Representational State Transfer (REST) style. The MISE defines a URI endpoint for publication, and information-provider systems send HTTP requests and receive responses to URI paths beneath this URI endpoint.   </p>
@@ -290,5 +285,3 @@ Note that position updates MUST be valid instances of the NIEM-M Position/Track 
 <td></td>
 	</tr><tr><th>Response Content Type</th>
 <td>Empty</td>
-</body>
-</html>
