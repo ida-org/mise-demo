@@ -5,6 +5,15 @@ This Maritime Information Sharing Environment (MISE) GitHub site is an
 unofficial 3rd party demo. See the [MISE website](https://mise.mda.gov/)
 for the official source material.
 
+## General Description
+
+The MISE defines a low cost, implementable solution for maritime information 
+sharing while providing mechanisms to mitigate associated legal and policy 
+concerns. As a participant in the MISE, data providers and consumers manage 
+and share maritime information through common data definitions and security 
+attributes, resulting in an internet accessible, unclassified information 
+sharing capability.
+
 ## Common Profile
 
 The MISE may be understood in terms of a 
