@@ -17,12 +17,14 @@ specific implementations:
 
 This GitHub project shares some of the implementation-level code. The 
 "Implementation View Plumbing" refers to code that provides the various
-requirements laid oud in the Security and Data technical guidance views and various subviews. The "Client Sample Code" shows how to access the publish
-service (including deleting resources), as well as the retrieve service, and search service (not in diagram).
+requirements laid out in the Security and Data technical guidance views and 
+various subviews. The "Client Sample Code" shows how to access the publish
+service (including deleting resources), as well as the retrieve service, and 
+search service (not in diagram).
 
 | Implementation | Implementation View Plumbing | Client Sample Code|
 | ---------------|------------------------------|-------------------|
-| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | [source jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-sources.jar) <br> [binary jar](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/MDAUtils-1.0-SNAPSHOT-jar-with-dependencies.jar) | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
+| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | source and binary jar files - <code>MDA-clients/java/MDAUtils-1.0-*.jar</code> | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
 | [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) | [MDA-clients/dotnet/MdaToolkit] (https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet/MdaToolkit) | [MDA-clients/dotnet/ClientTest/ClientTest.cs](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs) |
 
 ## Downloads
