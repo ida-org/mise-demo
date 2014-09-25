@@ -1,5 +1,5 @@
 <h1 class="with-tabs">Vessel Position Logical Models</h1>
-                                                                                          </div>
+
 <h2>Querying for Vessel Positions</h2>
 <p>The logical model below depicts the kinds of queries to request vessel position data supported by the MISE Search Service.  For example queries can be made based on vessel information, GeoLocation, and date range.  These elements may be combined in the request to filter the results returned.<br /><img src="Position_Request.png" width="75%" /><br />
 See <a href="https://mise.mda.gov/drupal/node/41">Search Parameters for Vessel Positions</a> for a list of valid search parameters.<br />
