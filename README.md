@@ -24,7 +24,7 @@ specific implementations:
 
 ![MISE Common Profile Overview](www/MISE.png)
 
-The [Security](https://github.com/ida-org/mise-demo/blob/master/www/security-services-interfacing.md) and Data Technical 
+The [Security](www/security-services-interfacing.md) and Data Technical 
 Guidance views, along with their various subviews, define the exchange data 
 formats as well as the security requirements for successful data exchange. For
 example, [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)
@@ -35,13 +35,12 @@ provide confidentiality as well as machine-to-machine authentication.
 This GitHub project shares some of the implementation-level code. The 
 "Implementation View Plumbing" refers to code that implements TG view
 requirements like the ones mentioned above. The "Client Sample Code" shows how
-to access the [publish service](https://github.com/ida-org/mise-demo/blob/master/www/publish-spec.md) 
-(including deleting position records) and the 
-[search and retrieve services](www/search-retrieve-spec.md).
+to access the [publish service](www/publish-spec.md) (including deleting
+position records) and the [search and retrieve services](www/search-retrieve-spec.md).
 
 | Implementation | Implementation View Plumbing | Client Sample Code|
 |----------------|------------------------------|-------------------|
-| [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | source and binary jar files - <code>MDA-clients/java/MDAUtils-1.0-*.jar</code>† | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
+| [Java](MDA-clients/java) | source and binary jar files - <code>MDA-clients/java/MDAUtils-1.0-*.jar</code>† | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
 | [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) | [MDA-clients/dotnet/MdaToolkit](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet/MdaToolkit) | [MDA-clients/dotnet/ClientTest/ClientTest.cs](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs) |
 
 † The jar files must be accessed by downloading the zip file below, or by
