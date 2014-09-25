@@ -37,7 +37,7 @@ This GitHub project shares some of the implementation-level code. The
 requirements like the ones mentioned above. The "Client Sample Code" shows how
 to access the [publish service](https://github.com/ida-org/mise-demo/blob/master/www/publish-spec.md) 
 (including deleting position records) and the 
-[search and retrieve services](https://mise.mda.gov/drupal/node/106).
+[search and retrieve services](www/search-retrieve-spec.md).
 
 | Implementation | Implementation View Plumbing | Client Sample Code|
 | ---------------|------------------------------|-------------------|
