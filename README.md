@@ -40,12 +40,46 @@ to access the [publish service](https://github.com/ida-org/mise-demo/blob/master
 [search and retrieve services](www/search-retrieve-spec.md).
 
 | Implementation | Implementation View Plumbing | Client Sample Code|
-| ---------------|------------------------------|-------------------|
+|----------------|------------------------------|-------------------|
 | [Java](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java) | source and binary jar files - <code>MDA-clients/java/MDAUtils-1.0-*.jar</code>† | [MDA-clients/java/src/test](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/java/src/test) |
 | [.Net (C#)](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet) | [MDA-clients/dotnet/MdaToolkit](https://github.com/ida-org/mise-demo/tree/master/MDA-clients/dotnet/MdaToolkit) | [MDA-clients/dotnet/ClientTest/ClientTest.cs](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs) |
 
 † The jar files must be accessed by downloading the zip file below, or by
 cloning this repository.
+
+## Selected Implementation Instance Views
+
+### Data:Exchange:Position
+
+[Position IEPD V3.2 Master Document](https://github.com/ida-org/mise-demo/blob/master/position-3.2.iepd/master-document.docx?raw=true) - 
+This IEPD is a set of NIEM 2.1-conformant exchange artifacts. It is conformant
+to the NIEM MPD (Model Package Description) Specification, version 1.1, and
+uses the file structure recommended by that document.
+
+### Services:Publish:Position
+
+[MISE Publish Specification](https://github.com/ida-org/mise-demo/blob/master/www/publish-spec.md) - 
+Provides the interface details for publishing, updating, and
+deleting recordsets within the MISE. The MISE follows the Representational
+State Transfer (REST) style. The MISE defines a URI endpoint for publication,
+and information-provider systems send HTTP requests and receive responses to
+URI paths beneath this URI endpoint.
+
+[TestPublishClient.java](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/src/test/TestPublishClient.java) - 
+Shows how to utilize the MDA Java client libraries to issue a publish request,
+e.g., of a vessel position record.
+
+[TestDeleteClient.java](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/java/src/test/TestDeleteClient.java) - 
+Shows how to utilize the MDA Java client libraries to issue a DELETE request
+against a previously published resource, such as a vessel position record.
+
+[ClientTest.cs](https://github.com/ida-org/mise-demo/blob/master/MDA-clients/dotnet/ClientTest/ClientTest.cs) - 
+The `publish()` and `delete()` methods show how to utilize the MDA .Net client
+libraries to publish and DELETE resources, such as vessel position records.
+
+### Services:Search/Receive:Position
+
+UNDER CONSTRUCTION
 
 ## Downloads
 
