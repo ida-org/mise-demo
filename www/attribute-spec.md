@@ -76,7 +76,8 @@ The following two modifiers can be used in conjunction with any of the three pri
 </th></tr><tr><td>Name
 </td><td>AdministrativePointofContactEmailAddressText
 </td></tr><tr><td>Description
-</td><td>The electronic mailing address by which to contact the person who is the administrative point of contact for the entity within the organization or agency by which the entity is owned and operated.
+</td><td>The electronic mailing address by which to contact the person who is the administrative point of contact
+for the entity within the organization or agency by which the entity is owned and operated.
 </td></tr><tr><td>Data Type
 </td><td>Text
 </td></tr><tr><td>Typical Usage
@@ -121,7 +122,8 @@ The following two modifiers can be used in conjunction with any of the three pri
 </th></tr><tr><td>Name
 </td><td>AdministrativePointofContactTelephoneNumber
 </td></tr><tr><td>Description
-</td><td>The telephone number for a telecommunications device by which to contact the person who is the administrative point of contact for the entity within the organization or agency by which the entity is owned and operated.
+</td><td>The telephone number for a telecommunications device by which to contact the person who is the administrative point of contact for the entity within the organization or agency by which the entity is 
+owned and operated.
 </td></tr><tr><td>Data Type
 </td><td>Text
 </td></tr><tr><td>Typical Usage
@@ -310,7 +312,8 @@ OEdjhJILd58GErcCECg4J2uJPz77/zk+giiXldQEPtG+YOaAbZC2SFbdfyYDKiSPhgzdy0/b4cElf4+V
 </th></tr><tr><td>Name
 </td><td>TechnicalPointofContactFaxNumber
 </td></tr><tr><td>Description
-</td><td>The telephone number for a facsimile device by which to contact the person who is the technical or engineering point of contact for the entity within the organization or agency by which the entity is owned and operated.
+</td><td>The telephone number for a facsimile device by which to contact the person who is the technical or engineering 
+point of contact for the entity within the organization or agency by which the entity is owned and operated.
 </td></tr><tr><td>Data Type
 </td><td>Text
 </td></tr><tr><td>Typical Usage
@@ -325,7 +328,8 @@ OEdjhJILd58GErcCECg4J2uJPz77/zk+giiXldQEPtG+YOaAbZC2SFbdfyYDKiSPhgzdy0/b4cElf4+V
 </th></tr><tr><td>Name
 </td><td>TechnicalPointofContactFullName
 </td></tr><tr><td>Description
-</td><td>The complete name of the person who is the technical or engineering point of contact for the entity within the organization or agency by which the entity is owned and operated.
+</td><td>The complete name of the person who is the technical or engineering point of contact for the 
+entity within the organization or agency by which the entity is owned and operated.
 </td></tr><tr><td>Data Type
 </td><td>Text
 </td></tr><tr><td>Typical Usage
@@ -340,7 +344,9 @@ OEdjhJILd58GErcCECg4J2uJPz77/zk+giiXldQEPtG+YOaAbZC2SFbdfyYDKiSPhgzdy0/b4cElf4+V
 </th></tr><tr><td>Name
 </td><td>TechnicalPointofContactTelephoneNumber
 </td></tr><tr><td>Description
-</td><td>The telephone number for a telecommunication device by which to contact the person who is the technical or engineering point of contact for the entity within the organization or agency by which the entity is owned and operated.
+</td><td>The telephone number for a telecommunication device by which to contact the person who is the 
+technical or engineering point of contact for the entity within the organization or agency by which 
+the entity is owned and operated.
 </td></tr><tr><td>Data Type
 </td><td>Text
 </td></tr><tr><td>Typical Usage
@@ -357,7 +363,8 @@ OEdjhJILd58GErcCECg4J2uJPz77/zk+giiXldQEPtG+YOaAbZC2SFbdfyYDKiSPhgzdy0/b4cElf4+V
 </th></tr><tr><td>Name
 </td><td>CitizenshipCode
 </td></tr><tr><td>Description
-</td><td>The country that has assigned rights, duties, and privileges to the user because of the birth or naturalization of the user in that country.
+</td><td>The country that has assigned rights, duties, and privileges to the user because of the birth 
+or naturalization of the user in that country.
 </td></tr><tr><td>Data Type
 </td><td>ISO 3166-1 Alpha-3 Country Code
 </td></tr><tr><td>Typical Usage
