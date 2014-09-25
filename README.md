@@ -22,9 +22,9 @@ reference view is expanded on by technical guidance views, each of which may
 have sub-views, either providing further technical guidance or details about
 specific implementations:
 
-![MISE Common Profile Overview](MISE.png)
+![MISE Common Profile Overview](www/MISE.png)
 
-The [Security](https://github.com/ida-org/mise-demo/blob/master/security-services-interfacing.md) and Data Technical 
+The [Security](https://github.com/ida-org/mise-demo/blob/master/www/security-services-interfacing.md) and Data Technical 
 Guidance views, along with their various subviews, define the exchange data 
 formats as well as the security requirements for successful data exchange. For
 example, [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)
@@ -35,7 +35,7 @@ provide confidentiality as well as machine-to-machine authentication.
 This GitHub project shares some of the implementation-level code. The 
 "Implementation View Plumbing" refers to code that implements TG view
 requirements like the ones mentioned above. The "Client Sample Code" shows how
-to access the [publish service](https://github.com/ida-org/mise-demo/blob/master/publish-spec.md) 
+to access the [publish service](https://github.com/ida-org/mise-demo/blob/master/www/publish-spec.md) 
 (including deleting position records) and the 
 [search and retrieve services](https://mise.mda.gov/drupal/node/106).
 
