@@ -78,7 +78,26 @@ libraries to publish and DELETE resources, such as vessel position records.
 
 ### Services:Search/Receive:Position
 
-UNDER CONSTRUCTION
+[MISE Search/Retrieve Specification](www/search-retrieve-spec.md) - Describes
+the data-consumer facing representational state transfer (REST) architecture
+providing search and retrieve (SR) functionality for the MISE. By conforming
+to this interface, the MISE provides data consumers with the ability to find
+and retrieve the right information at the right time, based on the needs,
+rights, and authorities of the user and the organizations requesting the
+information. 
+
+[TestSearchClient.java](MDA-clients/java/src/test/TestSearchClient.java) - 
+Shows how to utilize the MDA Java client libraries to issue a search request
+against shared resources, such as vessel position records.
+
+[TestRetrieveClient.java](MDA-clients/java/src/test/TestRetrieveClient.java) - 
+Shows how to utilize the MDA Java client libraries to retrieve shared
+resources, such as vessel position records.
+
+[ClientTest.cs](MDA-clients/dotnet/ClientTest/ClientTest.cs) - 
+The `search()` and `retrieve()` methods show how to utilize the MDA .Net
+client to search for and retrieve shared resources, such as vessel position 
+records.
 
 ## Downloads
 
