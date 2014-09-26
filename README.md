@@ -101,11 +101,11 @@ records.
 
 ## Further Resources
 
-* [MISE Introduction](description.md)
-* [National MDA Documents](national-mda-docs.md)
-* [MISE Attribute Specification](attribute-spec.md)
-* [Vessel Position Logical Models](vessel-position-logical-models.md)
-* [Process Flows for Security, Publish/Update, Delete, and Search/Retrieve](process-flows.md)
+* [MISE Introduction](www/description.md)
+* [National MDA Documents](www/national-mda-docs.md)
+* [MISE Attribute Specification](www/attribute-spec.md)
+* [Vessel Position Logical Models](www/vessel-position-logical-models.md)
+* [Process Flows for Security, Publish/Update, Delete, and Search/Retrieve](www/process-flows.md)
 
 ## Downloads
 
