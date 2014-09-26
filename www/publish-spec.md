@@ -31,7 +31,7 @@
 	user. Each published data set must have an associated Information Access
 	Policy (IAP). For more information on the IAP, see the
 	<a href="attribute-spec.md">MISE Attribute Specification</a> and the
-	<a href="https://mise.mda.gov/drupal/node/42">NIEM Maritime Information
+	<a href="niem-data-standards.md">NIEM Maritime Information
 		Exchange Package Documents (IEPD)</a>. The IAP information is carried
 		via attributes in the XML documents published to the MISE.</p>
 
@@ -134,7 +134,7 @@ To publish a single record, simply supply a recordset with only the one record. 
 <h2><a id="update">Updates</a></h2>
 <p>All REST PUT publish operations against the MISE for record publication will either create the new record or update the record if it already exists. Records are identified based on the RecordID/EntityID pair. </p>
 <h3><a id="posUpdate">Position Update</a></h3>
-<p>The position update operation in the publish interface is designed to work only with NIEM-M position instances, allowing information providers to update an existing <a href="https://mise.mda.gov/drupal/node/42">NIEM-M Position (POS)</a> instance message with new &lt;mda:Position&gt; elements.  For instance, an information provider might publish new positions in the track for a vessel every 5 minutes. The position publish interface allows the information provider to constantly update the track for a specific vessel, and when a query is performed via the <a href="">search interface</a>, retrieve part or all of that track, as a NIEM-M Position XML instance.</p>
+<p>The position update operation in the publish interface is designed to work only with NIEM-M position instances, allowing information providers to update an existing <a href="niem-data-standards.md">NIEM-M Position (POS)</a> instance message with new &lt;mda:Position&gt; elements.  For instance, an information provider might publish new positions in the track for a vessel every 5 minutes. The position publish interface allows the information provider to constantly update the track for a specific vessel, and when a query is performed via the <a href="">search interface</a>, retrieve part or all of that track, as a NIEM-M Position XML instance.</p>
 <p>Initial publish of a document to the MISE will performed in accordance with the general batch <a href="#publish">Publish</a> interface. When a document is published, it is available via a retrieve URL for the just-published document that will always point to that document as long as it is available on the MISE. For example if a POS record is published to the MISE, that URL might be:</p>
 <p><a href="">https://services.mda.gov/retrieve/pos/?entityid=agencyone.gov&amp;recordid=12345678</a></p>
 <p>This URL communicates the two critical parameters required for updating the positions on that record, the entity ID and the record ID. Both are required for all &lt;mda:Position&gt; element updates. The entity ID and record ID in combination will uniquely identify any record on the MISE. </p>
