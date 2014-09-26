@@ -99,6 +99,14 @@ The `search()` and `retrieve()` methods show how to utilize the MDA .Net
 client to search for and retrieve shared resources, such as vessel position 
 records.
 
+## Further Resources
+
+* [MISE Introduction](description.md)
+* [National MDA Documents](national-mda-docs.md)
+* [MISE Attribute Specification](attribute-spec.md)
+* [Vessel Position Logical Models](vessel-position-logical-models.md)
+* [Process Flows for Security, Publish/Update, Delete, and Search/Retrieve](process-flows.md)
+
 ## Downloads
 
 * [GitHub ZIP](archive/master.zip)
