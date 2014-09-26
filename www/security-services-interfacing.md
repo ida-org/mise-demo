@@ -1,7 +1,12 @@
 <h1 class="with-tabs">Interfacing with the Security Services</h1>
-<p>All interactions to publish and consume data within the MISE are secured interactions over SSL between trusted systems.  As a prerequisite to understanding the security implementation examples in this section, it is highly recommend you first read the following documents:</p>
+
+<p>All interactions to publish and consume data within the MISE are secured
+	interactions over SSL between trusted systems.  As a prerequisite to
+	understanding the security implementation examples in this section, it is
+	highly recommend you first read the following documents:</p>
+
 <ol><li><a href="https://mise.mda.gov/drupal/node/77">National MDA Architecture Plan</a> for an overview of the MISE security approach.</li>
-<li><a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification</a> for the details of how trusted systems securely connect to the ISI.</li>
+<li><a href="security-spec.md">MISE Interface Security Specification</a> for the details of how trusted systems securely connect to the ISI.</li>
 <li><a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a> for an explanation of the common attributes used for entitlement management.</li>
 </ol><h1>Step 1: Obtain X.509 Certificates</h1>
 <p>Numerous tools and processes are available for creating key pairs and X.509 certificates. The exact process chosen by a trusted system will vary depending on the platform the trusted system implementation is based upon, agency procedures, and the chosen root CA.  In some cases a trusted system may need to generate a keypair and a certificate signing request (CSR) internally using a tool such as OpenSSL  or Java’s keytool, and submit the CSR to a root CA for signing following instructions provided by the root CA.  General instructions are provided at <a href="https://mise.mda.gov/drupal/node/39">generating the private key and public Certificate Signing Request (CSR).</a></p>
@@ -99,7 +104,14 @@ Now an example entry for a consumer trusted system.  Notice in the consuming sys
 	&lt;/md:ContactPerson&gt;
 &lt;/md:EntityDescriptor&gt;
 </pre><h1>Step 3: Download the Trust Fabric Document</h1>
-<p>At this point you can verify the trust fabric now has entity metadata so your trusted system can authenticate to the ISI by downloading the trust fabric.  As discussed in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification</a>, the trust fabric contains public keys for all trusted systems participating in the MISE, as well as the ISI certificates you will need to trust to interact with the MISE services. </p>
+
+<p>At this point you can verify the trust fabric now has entity metadata so
+	your trusted system can authenticate to the ISI by downloading the trust
+	fabric.  As discussed in the <a href="security-spec.md">MISE Interface
+	Security Specification</a>, the trust fabric contains public keys for all
+	trusted systems participating in the MISE, as well as the ISI certificates
+	you will need to trust to interact with the MISE services. </p>
+
 <p>The trust fabric endpoint requires HTTPS but does not require a client certificate or any other method of authentication.<br />
 Retrieve the trust fabric document by any standard means, including viewing in any browser, at the MISE server at <a href="https://services.mda.gov/miseresources/TrustFabric.xml">https://services.mda.gov/miseresources/TrustFabric.xml</a>.  </p>
 <p>The trust fabric document for the MISE test environment is available at:<br /><a href="https://107.23.66.168:9443/miseresources/TrustFabric.xml">https://107.23.66.168:9443/miseresources/TrustFabric.xml</a></p>

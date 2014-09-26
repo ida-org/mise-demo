@@ -14,10 +14,38 @@
 <td>Returns the Position instance for the specified record based on RecordID/EntityID and temporal parameters.<br />If the start and end parameters are not specified, the default time window will be the previous 24 hours.<br />Specifying the full previous 30 day window will return all mda:Position elements for this NIEM-M POS instance.</td>
 </tr><tr><td width="20%"><a href="#search">Search</a></td>
 <td><code>GET search/&lt;iepd&gt;/?=</code></td>
-<td>Returns set of records of the specified IEPD type based on the query parameters.	<br />A search cannot combine geospatial and term searches. If both are specified, the MISE will use the geospatial parameters only.	<br />If the start and end parameters are not specified, the default time window will be the previous 24 hours.	</td></tr></table><p>This interface provides a paginated search interface, which breaks large query results sets into "pages" based on time windows, which will be explained in the next sections.</p>
-<p>All interactions with the SR interface are secured as described by the  <a href="/drupal/node/104">MISE Interface Security Specification</a>. For search and retrieve operations, both the Trusted System Authentication and the User Attribute Conveyance portions of the interface security specification apply.  All records available on the MISE are formatted using NIEM-Maritime, as described in the <a href="/drupal/node/42">National MDA Architecture Information Exchange Package Documents (IEPD)</a>. </p>
+<td>Returns set of records of the specified IEPD type based on the query
+	parameters.	<br />
+	A search cannot combine geospatial and term searches. If both are
+	specified, the MISE will use the geospatial parameters only.	<br />
+	If the start and end parameters are not specified, the default time window
+	will be the previous 24 hours.
+</td>
+</tr>
+</table>
+
+<p>This interface provides a paginated search interface, which breaks large
+	query results sets into "pages" based on time windows, which will be
+	explained in the next sections.</p>
+
+<p>All interactions with the SR interface are secured as described by the
+	<a href="security-spec.md">MISE Interface Security Specification</a>. For
+	search and retrieve operations, both the Trusted System Authentication and
+	the User Attribute Conveyance portions of the interface security
+	specification apply.  All records available on the MISE are formatted
+	using NIEM-Maritime, as described in the
+	<a href="/drupal/node/42">National MDA Architecture Information Exchange
+		Package Documents (IE</p>
+
 <h2>Protocol, Sessions, and Security</h2>
-<p>All interactions with the MISE are done over Secure Socket Layer/Transport Layer Security (SSL/TLS) connections. SSL/TLS are enforced to protect information in transit and session cookies. Each client querying against the search interfaces is authenticated by the MISE and is provided with a limited-duration session cookie, which must be supplied in the header of following requests. The method for authentication is discussed the <a href="/drupal/node/104">MISE Interface Security Specification</a>.</p>
+<p>All interactions with the MISE are done over Secure Socket Layer/Transport
+	Layer Security (SSL/TLS) connections. SSL/TLS are enforced to protect
+	information in transit and session cookies. Each client querying against
+	the search interfaces is authenticated by the MISE and is provided with a
+	limited-duration session cookie, which must be supplied in the header of
+	following requests. The method for authentication is discussed the
+	<a href="security-spec.md">MISE Interface Security Specification</a>.</p>
+
 <h2> Header Information</h2>
 <p>The MISE search interface uses the following HTTP headers for specific purposes.  All other HTTP headers should be interpreted according to the HTTP 1.1 standard.</p>
 <ul><li>Accept: By default, if no Accept is specified, the summary feed will be returned in the Atom format as specified above. However, the following Accept headers may be supplied, resulting in translated feeds:
@@ -35,7 +63,7 @@
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>Empty</td>
@@ -90,7 +118,7 @@
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>Empty</td>
@@ -148,7 +176,7 @@
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>Empty</td>

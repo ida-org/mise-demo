@@ -22,7 +22,19 @@
 <td><code>DELETE publish/&lt;iepd&gt;/&lt;RecordID&gt;</code></td>
 <td>Deletes the record uniquely identified by the RecordID and EntityID.</td>
 </tr></table><p>All URIs are defined relative to BaseURI, which represents the HTTP endpoint of the publication interface at the MISE. The physical URI will be provided when the trusted system is integrated with the MISE. For example only, this specification uses https://services.mda.gov/ as the base URI. </p>
-<p>All messages are authenticated and secured in the manner described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification</a>. For publication, the Trusted System Authentication portion of the interface security specification applies, but the User Attribute Conveyance portion does not apply since publication is not done on behalf of any individual user. Each published data set must have an associated Information Access Policy (IAP). For more information on the IAP, see the <a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a> and the <a href="https://mise.mda.gov/drupal/node/42">NIEM Maritime Information Exchange Package Documents (IEPD)</a>. The IAP information is carried via attributes in the XML documents published to the MISE.</p>
+
+<p>All messages are authenticated and secured in the manner described in the
+	<a href="security-spec.md">MISE Interface Security Specification</a>. For
+	publication, the Trusted System Authentication portion of the interface
+	security specification applies, but the User Attribute Conveyance portion
+	does not apply since publication is not done on behalf of any individual
+	user. Each published data set must have an associated Information Access
+	Policy (IAP). For more information on the IAP, see the
+	<a href="attribute-spec.md">MISE Attribute Specification</a> and the
+	<a href="https://mise.mda.gov/drupal/node/42">NIEM Maritime Information
+		Exchange Package Documents (IEPD)</a>. The IAP information is carried
+		via attributes in the XML documents published to the MISE.</p>
+
 <h2>Message Flow Patterns</h2>
 <p>This section describes the sequence of HTTP request/response messages that is expected to occur during normal operation. These processes allow an information provider to keep the MISE up to date.</p>
 <h3>Initial Full Publication</h3>
@@ -43,7 +55,7 @@
 <td></td>
 </tr><tr><th rowspan="2">Request Headers</th>
 <td>Authorization</td>
-<td>As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a></td>
+<td>As described in the <a href="security-spec.md">MISE Interface Security Specification.</a></td>
 </tr><tr><td>If-Modified-Since</td>
 <td>Information provider system may send this header if it has previously read and cached this resource.</td>
 </tr><tr><th>Request Content Type</th>
@@ -84,7 +96,7 @@
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content</th>
 <td>Set of XML records</td>
@@ -136,7 +148,7 @@ To publish a single record, simply supply a recordset with only the one record. 
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>NIEM-M POS instance with one or more &lt;mda:Position&gt; elements</td>
@@ -212,7 +224,7 @@ Note that position updates MUST be valid instances of the NIEM-M Position/Track 
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>Empty</td>
@@ -261,7 +273,7 @@ Note that position updates MUST be valid instances of the NIEM-M Position/Track 
 	</tr><tr><th>Request Headers</th>
 <td>Authorization</td>
 <td>
-			As described in the <a href="https://mise.mda.gov/drupal/node/104">MISE Interface Security Specification.</a>
+			As described in the <a href="security-spec.md">MISE Interface Security Specification.</a>
 		</td>
 </tr><tr><th>Request Content Type</th>
 <td>application/xml; charset=UTF-8</td>
