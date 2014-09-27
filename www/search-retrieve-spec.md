@@ -35,7 +35,7 @@
 	specification apply.  All records available on the MISE are formatted
 	using NIEM-Maritime, as described in the
 	<a href="niem-data-standards.md">National MDA Architecture Information
-		Exchange Package Documents (IE</p>
+		Exchange Package Documents (IEPD)</a>.</p>
 
 <h2>Protocol, Sessions, and Security</h2>
 <p>All interactions with the MISE are done over Secure Socket Layer/Transport
