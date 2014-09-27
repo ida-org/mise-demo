@@ -36,8 +36,9 @@
 	MISE start with the section titled <a href="code-overview.md">Code
 	Overview</a>, and then visit the sections on
 	<a href="process-flows.md">Process Flows for Security, Publish/Update,
-		Delete, Search, and Retrieve</a>, <a href="drupal/node/28">Interfacing
-		with the Publication Service</a>,
+		Delete, Search, and Retrieve</a>, 
+		<a href="publish-service-interfacing.md">Interfacing with the
+			Publication Service</a>,
 	<a href="/drupal/node/29">Interfacing with the Delete Service</a>, and
 	<a href="/drupal/node/30">Interfacing with the Search and Retrieve
 		Service</a>.</p>
