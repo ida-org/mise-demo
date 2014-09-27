@@ -36,7 +36,8 @@ for reading and writing files.</p>
   Security Services</a>
 </li><li><a href="publish-service-interfacing.md">Interfacing with the
 Publication Service</a>
-</li><li><a href="/drupal/node/29">Interfacing with the Delete Service</a>
+</li><li><a href="delete-service-interfacing.md">Interfacing with the Delete
+Service</a>
 </li><li><a href="/drupal/node/30">Interfacing with the Search and Retrieve
 Service</a>
 </li></ol>
