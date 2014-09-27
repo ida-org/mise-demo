@@ -8,7 +8,7 @@
 	containing these code examples is also available on that page.</p>
 
 <p>This example walks through a query for Position reports based on the first
-	Position <a href="/drupal/node/26">User Story</a>, a search bounded by
+	Position <a href="user-stories.md">User Story</a>, a search bounded by
 	geospatial area and time. This example assumes the searching system can
 	interface with the MISE
 	<a href="security-services-interfacing.md">security services</a>,
