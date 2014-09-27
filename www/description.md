@@ -39,9 +39,9 @@
 		Delete, Search, and Retrieve</a>, 
 		<a href="publish-service-interfacing.md">Interfacing with the
 			Publication Service</a>,
-	<a href="delete-service-interfacing.md">Interfacing with the Delete Service</a>, and
-	<a href="/drupal/node/30">Interfacing with the Search and Retrieve
-		Service</a>.</p>
+	<a href="delete-service-interfacing.md">Interfacing with the Delete
+		Service</a>, and <a href="search-service-interfacing.md">Interfacing
+		with the Search and Retrieve Service</a>.</p>
 
 <h3>Security Services</h3>
 

@@ -38,8 +38,8 @@ for reading and writing files.</p>
 Publication Service</a>
 </li><li><a href="delete-service-interfacing.md">Interfacing with the Delete
 Service</a>
-</li><li><a href="/drupal/node/30">Interfacing with the Search and Retrieve
-Service</a>
+</li><li><a href="search-service-interfacing.md">Interfacing with the Search
+and Retrieve Service</a>
 </li></ol>
 
 <p>Please note that the current base URL for the MISE is 

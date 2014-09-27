@@ -21,89 +21,94 @@
 
 <table></table>
 Following is an example entry for a provider trusted system:
-<pre class="brush: xml">
-&lt;md:EntityDescriptor entityID="https://mise.agencythree.gov/"&gt;
-	&lt;md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
-		xsi:type="mise:MISEProviderDescriptorType"&gt;
-		&lt;md:KeyDescriptor use="signing"&gt;
-			&lt;ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
-				&lt;ds:X509Data&gt;
-					&lt;ds:X509Certificate&gt;
-						&lt;!-- Base 64 encoded certificate embedded here
+
+```xml
+<md:EntityDescriptor entityID="https://mise.agencythree.gov/">
+	<md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
+		xsi:type="mise:MISEProviderDescriptorType">
+		<md:KeyDescriptor use="signing">
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:X509Data>
+					<ds:X509Certificate>
+						<!-- Base 64 encoded certificate embedded here
 						This is the client certificate which the trusted
 						system will present during SSL connection handshake.
 						The private key matching this certificate will also
 						be used by this trusted system for signing SAML
 						assertions.
-						--&gt;
-					&lt;/ds:X509Certificate&gt;
-				&lt;/ds:X509Data&gt;
-			&lt;/ds:KeyInfo&gt;
-		&lt;/md:KeyDescriptor&gt;
-	&lt;/md:RoleDescriptor&gt;
-	&lt;md:ContactPerson contactType="technical"&gt;
-		&lt;md:Company&gt;AgencyThree, Inc.&lt;/md:Company&gt;
-		&lt;md:GivenName&gt;Thomas&lt;/md:GivenName&gt;
-		&lt;md:SurName&gt;Jones&lt;/md:SurName&gt;
-		&lt;md:EmailAddress&gt;tjones@agencythree.gov &lt;/md:EmailAddress&gt;
-		&lt;md:TelephoneNumber&gt;703-555-4321&lt;/md:TelephoneNumber&gt;
-	&lt;/md:ContactPerson&gt;
-&lt;/md:EntityDescriptor&gt;
-</pre><p>
-Now an example entry for a consumer trusted system.  Notice in the consuming system entry in the trust fabric, the trusted system is assigned the appropriate indicator attributes used to make authorization decisions on queries.</p>
-<pre class="brush: xml">
-&lt;md:EntityDescriptor entityID="https://mise.agencythree.gov/"&gt;
-	&lt;md:Extensions&gt;
-		&lt;gfipm:EntityAttribute FriendlyName="COIIndicator"
-			Name="mise:1.4:entity:COIIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"&gt;
-			&lt;gfipm:EntityAttributeValue xsi:type="xs:string"&gt;True&lt;/gfipm:EntityAttributeValue&gt;
-		&lt;/gfipm:EntityAttribute&gt;
-		&lt;gfipm:EntityAttribute FriendlyName="LawEnforcementIndicator"
-			Name="mise:1.4:entity:LawEnforcementIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"&gt;
-			&lt;gfipm:EntityAttributeValue xsi:type="xs:string"&gt;True&lt;/gfipm:EntityAttributeValue&gt;
-		&lt;/gfipm:EntityAttribute&gt;
-		&lt;gfipm:EntityAttribute FriendlyName="PrivacyProtectedIndicator"
-			Name="mise:1.4:entity:PrivacyProtectedIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"&gt;
-			&lt;gfipm:EntityAttributeValue xsi:type="xs:string"&gt;True&lt;/gfipm:EntityAttributeValue&gt;
-		&lt;/gfipm:EntityAttribute&gt;
-		&lt;gfipm:EntityAttribute FriendlyName="OwnerAgencyCountryCode"
-			Name="mise:1.4:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"&gt;
-			&lt;gfipm:EntityAttributeValue xsi:type="xs:string"&gt;USA&lt;/gfipm:EntityAttributeValue&gt;
-		&lt;/gfipm:EntityAttribute&gt;
-	&lt;/md:Extensions&gt;
-	&lt;md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
-		xsi:type="mise:MISEConsumerDescriptorType"&gt;
-		&lt;md:KeyDescriptor use="signing"&gt;
-			&lt;ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
-				&lt;ds:X509Data&gt;
-					&lt;ds:X509Certificate&gt;
-						&lt;!-- Base 64 encoded certificate embedded here
+						-->
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+	</md:RoleDescriptor>
+	<md:ContactPerson contactType="technical">
+		<md:Company>AgencyThree, Inc.</md:Company>
+		<md:GivenName>Thomas</md:GivenName>
+		<md:SurName>Jones</md:SurName>
+		<md:EmailAddress>tjones@agencythree.gov </md:EmailAddress>
+		<md:TelephoneNumber>703-555-4321</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+```
+
+<p>Now an example entry for a consumer trusted system.  Notice in the consuming system entry in the trust fabric, the trusted system is assigned the appropriate indicator attributes used to make authorization decisions on queries.</p>
+
+```xml
+<md:EntityDescriptor entityID="https://mise.agencythree.gov/">
+	<md:Extensions>
+		<gfipm:EntityAttribute FriendlyName="COIIndicator"
+			Name="mise:1.4:entity:COIIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">
+			<gfipm:EntityAttributeValue xsi:type="xs:string">True</gfipm:EntityAttributeValue>
+		</gfipm:EntityAttribute>
+		<gfipm:EntityAttribute FriendlyName="LawEnforcementIndicator"
+			Name="mise:1.4:entity:LawEnforcementIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">
+			<gfipm:EntityAttributeValue xsi:type="xs:string">True</gfipm:EntityAttributeValue>
+		</gfipm:EntityAttribute>
+		<gfipm:EntityAttribute FriendlyName="PrivacyProtectedIndicator"
+			Name="mise:1.4:entity:PrivacyProtectedIndicator" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">
+			<gfipm:EntityAttributeValue xsi:type="xs:string">True</gfipm:EntityAttributeValue>
+		</gfipm:EntityAttribute>
+		<gfipm:EntityAttribute FriendlyName="OwnerAgencyCountryCode"
+			Name="mise:1.4:entity:OwnerAgencyCountryCode" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified">
+			<gfipm:EntityAttributeValue xsi:type="xs:string">USA</gfipm:EntityAttributeValue>
+		</gfipm:EntityAttribute>
+	</md:Extensions>
+	<md:RoleDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
+		xsi:type="mise:MISEConsumerDescriptorType">
+		<md:KeyDescriptor use="signing">
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:X509Data>
+					<ds:X509Certificate>
+						<!-- Base 64 encoded certificate embedded here
                        			 This is the client certificate which the trusted
                         		system will present during SSL connection handshake.
                         		The private key matching this certificate will also
                         		be used by this trusted system for signing SAML
                         		assertions.
-                        		--&gt;
-					&lt;/ds:X509Certificate&gt;
-				&lt;/ds:X509Data&gt;
-			&lt;/ds:KeyInfo&gt;
-		&lt;/md:KeyDescriptor&gt;
-	&lt;/md:RoleDescriptor&gt;
-	&lt;md:Organization&gt;
-		&lt;md:OrganizationName xml:lang="en"&gt;Agency Three&lt;/md:OrganizationName&gt;
-		&lt;md:OrganizationDisplayName xml:lang="en"&gt;Agency
-			Three&lt;/md:OrganizationDisplayName&gt;
-		&lt;md:OrganizationURL xml:lang="en"&gt;http://www.agencythree.gov/&lt;/md:OrganizationURL&gt;
-	&lt;/md:Organization&gt;
-	&lt;md:ContactPerson contactType="technical"&gt;
-		&lt;md:Company&gt;AgencyThree, Inc.&lt;/md:Company&gt;
-		&lt;md:GivenName&gt;Thomas&lt;/md:GivenName&gt;
-		&lt;md:SurName&gt;Jones&lt;/md:SurName&gt;
-		&lt;md:EmailAddress&gt;tjones@agencythree.gov &lt;/md:EmailAddress&gt;
-		&lt;md:TelephoneNumber&gt;703-555-4321&lt;/md:TelephoneNumber&gt;
-	&lt;/md:ContactPerson&gt;
-&lt;/md:EntityDescriptor&gt;
-</pre><h1>Step 3: Download the Trust Fabric Document</h1>
+                        		-->
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>
+	</md:RoleDescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="en">Agency Three</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="en">Agency
+			Three</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="en">http://www.agencythree.gov/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+		<md:Company>AgencyThree, Inc.</md:Company>
+		<md:GivenName>Thomas</md:GivenName>
+		<md:SurName>Jones</md:SurName>
+		<md:EmailAddress>tjones@agencythree.gov </md:EmailAddress>
+		<md:TelephoneNumber>703-555-4321</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+```
+
+<h1>Step 3: Download the Trust Fabric Document</h1>
 
 <p>At this point you can verify the trust fabric now has entity metadata so
 	your trusted system can authenticate to the ISI by downloading the trust
@@ -118,7 +123,7 @@ Retrieve the trust fabric document by any standard means, including viewing in a
 <h2>Validate the Trust Fabric Signature Programmatically</h2>
 <p>Since the trust fabric document is a SAML metadata file, this sample code is able to leverage the open source OpenSAML project to simplify implementation. Trusted system implementations not written in Java, or which already include other SAML implementations, may also be able to simplify implementation by relying on existing SAML metadata implementations.</p>
 <p>The following code snippet shows how the trust fabric document may be loaded into a DOM object so the signing certificate can be parsed and the signature on the document validated.  It relies on the JAR files included in the <a href="https://mise.mda.gov/tools/MDAClient-CodeOnly.zip">MDA Client Toolkit</a>.</p>
-<pre class="brush:java">
+```java
 	    	// read in the trust fabric from a local file location
 	    	FileInputStream fis = new FileInputStream("/local/path/TrustFabric.xml");
 	    	m_domFactory = DocumentBuilderFactory.newInstance();
@@ -128,9 +133,12 @@ Retrieve the trust fabric document by any standard means, including viewing in a
 		// cryptographic validation of signature
 		X509Certificate signedByCert = verifyXMLSignature(domElement);
 		System.out.println(String.format("Signature validation %s", signedByCert == null ? "FAILED" : "SUCCEEDED"));
-</pre><p>
+```
+
+<p>
 The following snippet takes the trust fabric as a DOM object and returns the signing certificate if it is valid.</p>
-<pre class="brush:java">
+
+```java
 	public static X509Certificate verifyXMLSignature(Element target) throws Exception {
 		// Validate the signature -- i.e. SAML object is pristine:
 		NodeList nl = target.getElementsByTagNameNS(XMLSignature.XMLNS, "Signature");
@@ -151,8 +159,10 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
 
 		return kvs.getUsedCertificate();
 	}
-</pre><h1>Step 4: Implement MISE Security Attributes</h1>
-<p>As detailed in the <a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a>, entitlement management within the MISE relies on the use of a common set of entity, user, and data attributes to make run-time authorization decisions as to whether a trusted system and requesting user are authorized to access a requested information resource.</p>
+```
+
+<h1>Step 4: Implement MISE Security Attributes</h1>
+<p>As detailed in the <a href="attribute-spec.md">MISE Attribute Specification</a>, entitlement management within the MISE relies on the use of a common set of entity, user, and data attributes to make run-time authorization decisions as to whether a trusted system and requesting user are authorized to access a requested information resource.</p>
 <p>There are three categories for attributes defined for the National MDA Architecture:</p>
 <ol><li>Entity Attributes: Attributes that pertain to a trusted system within the MISE.</li>
 <li>User Attributes: Attributes that pertain to a human user.</li>
@@ -192,10 +202,13 @@ IEPD artifacts are available at the top of the
 <td> Space-delimited list of 3-letter country codes, ex. “CAN USA FRA”</td>
 <td> Indicates data can only be released to those nations identified by the country codes.  Default value is “USA”.</td>
 </tr></table><p>For example to publish a vessel position message that is law enforcement sensitive, not publically releasable, and shareable with only US, these fields will be added to the exchange element of the publish message as depicted in the example below.</p>
-<pre class="brush: xml">
-&lt;posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
-                mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="false"&gt;
-</pre><p>
+
+```xml
+<posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
+                mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="false">
+```
+
+<p>
 <strong>
 <li>(Optionally) Specify Scope using the MISE Security Attributes.</li>
 <p></p></strong></p>
@@ -211,11 +224,14 @@ IEPD artifacts are available at the top of the
 <td> “LEI” | ”PPI” | “COI”</td>
 <td> Minimum indicator required for access within the context of this scope. If this data is normally PPI data, you might want to provide it to all COI consumers within the context of this scope.</td>
 </tr></table><p>For example for the same vessel position message that is law enforcement sensitive, not publically releasable, and shareable with only US, you may want it to be accessible to the entire community for disaster release efforts related to Superstorm Sandy as depicted below.</p>
-<pre class="brush: xml">
-&lt;posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
+
+```xml
+<posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
                 mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="false"
-                mda:scopeText="Superstorm Sandy" mda:scopeIndicatorText="COI"&gt;
-</pre></ol><h2>Supplying User Attributes for Search and Retrieve</h2>
+                mda:scopeText="Superstorm Sandy" mda:scopeIndicatorText="COI">
+```
+
+</ol><h2>Supplying User Attributes for Search and Retrieve</h2>
 <h3>Map Local User Privileges to MISE User Attributes</h3>
 <p>Use the MISE security attributes as defined in the <a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a> to assert citizenship and the access level for the user associated with a query.<br />
 Citizenship is conveyed using the CitizenshipCode attribute, <code> mise:1.4:user:CitizenshipCode </code>, with a value equal to the ISO 3-letter country code.</p>
@@ -233,8 +249,9 @@ Citizenship is conveyed using the CitizenshipCode attribute, <code> mise:1.4:use
 <td> mise:1.4:user:COIIndicator </td>
 <td> Minimum access level assigned to user that requires access to information shared by the MISE community.</td>
 </tr></table><h1>Forming the SAML User Assertion</h1>
-<p>The following code snippet provides an example of building the user assertions and adding them to the context of the request.  The full example is shown in the section on <a href="https://mise.mda.gov/drupal/node/30">Interfacing with the Search Services</a>.</p>
-<pre class="brush:java">
+<p>The following code snippet provides an example of building the user assertions and adding them to the context of the request.  The full example is shown in the section on <a href="search-service-interfacing.md">Interfacing with the Search Services</a>.</p>
+
+```java
 //Form the user assertion
 String assertingPartyID = "test.client";
 AssertionBuilder builder = new AssertionBuilder(assertingPartyID);
@@ -250,21 +267,24 @@ builder.signUsingPkcs12(assertingPartyID, FilenameUtils.separatorsToSystem(keyst
 Assertion assertion = builder.getAssertion();
 
 HttpResponse response = m_client.post("/MDAUserSessionService/login", null, SAMLUtils.asXMLString(assertion), ContentType.APPLICATION_XML);
-</pre><h2>Security Attributes on Summary Records from Search</h2>
-<p>The following XML snippet provides an example of the security attributes applied on the records to convey data protection requirements.  </p>
-<pre class="brush:xml">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;mise-recordset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+```
+
+<h2>Security Attributes on Summary Records from Search</h2>
+<p>The following XML snippet provides an example of the security attributes applied on the records to convey data protection requirements.</p>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mise-recordset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="../../../../position-3.2.iepd/XMLschemas/exchange/3.2/mise-recordset.xsd"
  pageElements="250"
  query="https://services.mda.gov/search/noa/?start=2013-08-27T22:20:56&amp;end=2013-08-28T22:22:56"
- nextQuery="https://services.mda.gov/search/noa/?start=2013-08-27T22:20:56&amp;nextTime=2013-08-27T22:20:00:001"&gt;
-  &lt;posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
-                  mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="false"&gt;
-    ...snip...&lt;/posex:Message&gt;
-  &lt;posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
-                  mda:securityIndicatorText="PPI" mda:releasableNationsCode="USA" mda:releasableIndicator="false"&gt;
-    ...snip...&lt;/posex:Message&gt;
+ nextQuery="https://services.mda.gov/search/noa/?start=2013-08-27T22:20:56&amp;nextTime=2013-08-27T22:20:00:001">
+  <posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
+                  mda:securityIndicatorText="LEI" mda:releasableNationsCode="USA" mda:releasableIndicator="false">
+    ...snip...</posex:Message>
+  <posex:Message xmlns:posex="http://niem.gov/niem/domains/maritime/2.1/position/exchange/3.2"
+                  mda:securityIndicatorText="PPI" mda:releasableNationsCode="USA" mda:releasableIndicator="false">
+    ...snip...</posex:Message>
   [... next 248 records]
-&lt;/mise-recordset&gt;
-</pre></td></li></ul>
+</mise-recordset>
+```
