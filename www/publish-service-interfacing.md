@@ -134,14 +134,14 @@ m_client.setClientCert(FilenameUtils.separatorsToSystem(keystorePath), keystoreP
 	instances for publish:</p>
 
 ```xml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;mise-recordset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<mise-recordset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="../../../../position-3.2.iepd/XMLschemas/exchange/3.2/mise-recordset.xsd"
-	pageElements="250"&gt;
-	&lt;posex:Message&gt; ...snip...&lt;/posex:Message&gt;
-	&lt;posex:Message&gt; ...snip...&lt;/posex:Message&gt;
+	pageElements="250">
+	<posex:Message> ...snip...</posex:Message>
+	<posex:Message> ...snip...</posex:Message>
 	[... next 248 records]
-&lt;/mise-recordset&gt;
+</mise-recordset>
 ```
 
 ```java
