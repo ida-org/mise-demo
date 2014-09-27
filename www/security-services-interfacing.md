@@ -160,9 +160,17 @@ The following snippet takes the trust fabric as a DOM object and returns the sig
 </ol><p>Currently information is grouped by LE sensitive (LEI), privacy protected (PPI) and the rest of the community (COI).  These groups map to the security indicators, i.e. Law Enforcement Indicator, Privacy Protected Indicator, and COI Indicator, defined in the attribute specification.  There is a one-to-one relationship between the security indicators assigned to information resources (data attributes) and the indicators assigned to information consumer trusted systems (entity attributes) and users (user attributes) to convey their permissions.  In order for trusted systems to access information on behalf of a user, both the trusted system’s and user’s permissions must match the security tags placed on the information.</p>
 <h2>Information Provider use of Security Attributes</h2>
 <p>Access controls for the information you publish are conveyed by adding security attribute tags on the root element of each message (record) published.  These security attributes applied within the message make up the information access policy that will be used by the ISI to determine which consumer requests can access your information. The following high level steps may be used as a guide to understand how you as the information provider define your information access policy.</p>
-<ol><strong>
-<li>First you must determine the information you will share.</li>
-<p></p></strong>The types of information that can currently be shared via the ISI include vessel position reports, vessel of interest/alert information, and vessel arrival information.  Download the corresponding NIEM-M based information exchange package documentation which defines the message format.  Links to the IEPD artifacts are available at the top of the <a href="https://mise.mda.gov/drupal/node/24"> Data Mapping</a> section.
+
+<ol>
+<strong><li>First you must determine the information you will share.</li>
+<p></p></strong>
+The types of information that can currently be shared via the ISI include
+vessel position reports, vessel of interest/alert information, and vessel
+arrival information. Download the corresponding NIEM-M based information
+exchange package documentation which defines the message format. Links to the
+IEPD artifacts are available at the top of the 
+<a href="data-mapping.md"> Data Mapping</a> section.
+
 <p><strong>
 <li>Identify the legislative or policy constraints on the information. </li>
 <p></p></strong>As the information provider you must work with your policy and/or legal department to identify which elements within a type of message can be shared and which have restrictions.  This will involve an element by element evaluation of the message format defined within the IEPD. </p>

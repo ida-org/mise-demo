@@ -28,7 +28,7 @@
 
 <p>To learn more about using the NIEM-M exchange models, where they can be
 	downloaded, and how to produce messages to adhere to these standards
-	review the section on <a href="/drupal/node/24">Data Mapping</a>.</p>
+	review the section on <a href="data-mapping.md">Data Mapping</a>.</p>
 
 <h3>Service Interfaces</h3>
 
