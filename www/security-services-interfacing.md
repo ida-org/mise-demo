@@ -7,7 +7,7 @@
 
 <ol><li><a href="https://mise.mda.gov/drupal/node/77">National MDA Architecture Plan</a> for an overview of the MISE security approach.</li>
 <li><a href="security-spec.md">MISE Interface Security Specification</a> for the details of how trusted systems securely connect to the ISI.</li>
-<li><a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a> for an explanation of the common attributes used for entitlement management.</li>
+<li><a href="attribute-spec.md">MISE Attribute Specification</a> for an explanation of the common attributes used for entitlement management.</li>
 </ol><h1>Step 1: Obtain X.509 Certificates</h1>
 <p>Numerous tools and processes are available for creating key pairs and X.509 certificates. The exact process chosen by a trusted system will vary depending on the platform the trusted system implementation is based upon, agency procedures, and the chosen root CA.  In some cases a trusted system may need to generate a keypair and a certificate signing request (CSR) internally using a tool such as OpenSSL  or Java’s keytool, and submit the CSR to a root CA for signing following instructions provided by the root CA.  General instructions are provided at <a href="https://mise.mda.gov/drupal/node/39">generating the private key and public Certificate Signing Request (CSR).</a></p>
 <h1>Step 2: Register Trusted System in Trust Fabric</h1>
@@ -188,7 +188,7 @@ IEPD artifacts are available at the top of the
 <p><strong>
 <li>Specify your information access policy using the MISE security attributes.</li>
 <p></p></strong>Currently information is grouped by LE sensitive (LEI), privacy protected (PPI) and the rest of the community (COI).  Additionally you can limit based on country and specify releasability of the information.</p>
-<p>The following table highlights the primary attributes used to specify information access policy.  For the full description of all attributes, see the <a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification.</a></p>
+<p>The following table highlights the primary attributes used to specify information access policy.  For the full description of all attributes, see the <a href="attribute-spec.md">MISE Attribute Specification.</a></p>
 <table><tr><td> Attribute Name</td>
 <td> Possible Values</td>
 <td> Description</td>
@@ -233,7 +233,7 @@ IEPD artifacts are available at the top of the
 
 </ol><h2>Supplying User Attributes for Search and Retrieve</h2>
 <h3>Map Local User Privileges to MISE User Attributes</h3>
-<p>Use the MISE security attributes as defined in the <a href="https://mise.mda.gov/drupal/node/103">MISE Attribute Specification</a> to assert citizenship and the access level for the user associated with a query.<br />
+<p>Use the MISE security attributes as defined in the <a href="attribute-spec.md">MISE Attribute Specification</a> to assert citizenship and the access level for the user associated with a query.<br />
 Citizenship is conveyed using the CitizenshipCode attribute, <code> mise:1.4:user:CitizenshipCode </code>, with a value equal to the ISO 3-letter country code.</p>
 <p>The access level is conveyed using one or more attributes defined as indicators.</p>
 <table width="100%"><tr><td> Indicator</td>
