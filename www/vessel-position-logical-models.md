@@ -10,7 +10,7 @@
 
 <img src="Position_Request.png" width="75%" /><br />
 
-See <a href="https://mise.mda.gov/drupal/node/41">Search Parameters for Vessel
+See <a href="vessel-search-parameters.md">Search Parameters for Vessel
 Positions</a> for a list of valid search parameters.<br />
 
 <p>See <a href="user-stories.md">User Stories for Search</a> for examples of
@@ -26,6 +26,6 @@ combining search parameters.</p>
 <img src="Position_Full.png" width="75%" /></p>
 
 <ul class="menu">
-  <li class="first last leaf"><a href="https://mise.mda.gov//drupal/node/41">Search
+  <li class="first last leaf"><a href="vessel-search-parameters.md">Search
   	Parameters for Vessel Positions</a></li>
 </ul>
