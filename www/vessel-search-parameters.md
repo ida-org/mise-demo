@@ -25,7 +25,7 @@
 <td width="50%"> ulat=$value&amp;ulng=$value&amp;llat=$value&amp;llng=$value</td>
 </tr><tr><td width="50%"> Date Range</td>
 <td width="50%"> start=$value&amp;end=$value</td>
-</tr></table><p>See <a href="/drupal/node/26">User Stories for Search</a> for examples of combining search parameters.</p>
+</tr></table><p>See <a href="user-stories.md">User Stories for Search</a> for examples of combining search parameters.</p>
 
 <h2> Filter by Record Metadata </h2>
 <p>Record metadata is included in a record to provide additional information for handling and/or managing the record.  In the request logical model above, the record metadata depicted on the left side of the graphic includes such information as record status, creation date, and exercise name.  In some cases it may be useful to further filter the result set on the client side by record metadata.  For example, filter for only updated records, only records created in the last 24 hours, or only records associated with a specific exercise.</p>
