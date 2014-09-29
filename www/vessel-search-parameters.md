@@ -1,7 +1,7 @@
 <h1 class="with-tabs">Search Parameters for Vessel Positions</h1>
 
 <h2>Position Request Logical Model</h1>
-<p>As depicted in the logical diagram below you can search for position reports within a geospatial area.<br /><img src="/drupal/sites/default/files/Position_Request.png" width="100%" /></p>
+<p>As depicted in the logical diagram below you can search for position reports within a geospatial area.<br /><img src="Position_Request.png" width="100%" /></p>
 <p>In the examples below, the URL is relative to the mise.mda.gov base path for MISE service access. The placeholder $value is used in the place of query values.</p>
 <table width="100%"><tr><td width="50%"> Search for vessel position by geospatial area</td>
 <td width="50%"> /search/pos?ulat=$value&amp;ulng=$value&amp;llat=$value&amp;llng=$value</td>
