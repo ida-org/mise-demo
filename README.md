@@ -17,7 +17,7 @@ sharing capability.
 ## Common Profile
 
 The MISE may be understood in terms of a 
-"[common profile](http://pi3.ida.org/common-profile)" whereby a single
+"[common profile](https://pi3.ida.org/common-profile)" whereby a single
 reference view is expanded on by technical guidance views, each of which may
 have sub-views, either providing further technical guidance or details about
 specific implementations:
