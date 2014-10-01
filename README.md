@@ -38,7 +38,7 @@ requirements like the ones mentioned above. The "Client Sample Code" shows how
 to access the [publish service](www/publish-spec.md) (including deleting
 position records) and the [search and retrieve services](www/search-retrieve-spec.md).
 
-| Implementation | Implementation View Plumbing | Client Sample Code|
+| Implementation | Toolkit | Client Sample Code|
 |----------------|------------------------------|-------------------|
 | [Java](MDA-clients/java) | source and binary jar files - <code>MDA-clients/java/MDAUtils-1.0-*.jar</code>† | [MDA-clients/java/src/test](MDA-clients/java/src/test) |
 | [.Net (C#)](MDA-clients/dotnet) | [MDA-clients/dotnet/MdaToolkit](MDA-clients/dotnet/MdaToolkit) | [MDA-clients/dotnet/ClientTest/ClientTest.cs](MDA-clients/dotnet/ClientTest/ClientTest.cs) |
